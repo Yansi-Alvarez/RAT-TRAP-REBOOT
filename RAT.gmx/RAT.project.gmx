@@ -1158,23 +1158,9 @@
     </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\bkgd_Title</background>
-    <background>background\bkgd_Upgrade</background>
-    <background>background\bkgd_Cage</background>
-    <background>background\bkgd_Home_Example</background>
-    <background>background\bkgd_HUD</background>
-    <backgrounds name="Floors">
-      <background>background\bkgd_Concrete</background>
-      <background>background\bkgd_Tile</background>
-      <background>background\bkgd_Diagonal_Concrete</background>
-    </backgrounds>
-    <backgrounds name="Background Tiles">
-      <background>background\bkgd_Black</background>
-    </backgrounds>
-    <backgrounds name="tests">
-      <background>background\bkgd_Cage_test</background>
-      <background>background\bkgd_Upgrade_Test</background>
-    </backgrounds>
+    <backgrounds name="Floors"/>
+    <backgrounds name="Background Tiles"/>
+    <backgrounds name="tests"/>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
