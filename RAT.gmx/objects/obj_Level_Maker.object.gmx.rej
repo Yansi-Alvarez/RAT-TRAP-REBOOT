@@ -1,0 +1,107 @@
+diff a/RAT.gmx/objects/obj_Level_Maker.object.gmx b/RAT.gmx/objects/obj_Level_Maker.object.gmx	(rejected hunks)
+@@ -77,19 +77,100 @@
+         }
+     }
+ }
+-
+-////////////////////////////////////////////////////////////////////////////////
+-
++/*
+ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
+ 
+     for (j = 0; j &lt; obj_Director.grid_height; j += 1) {
+-    
++
++////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
++//Down is 10
++//Up is 11
++//Right is 12
++//Left is 13
++//Full is 14
++
+         if ((ds_grid_get(obj_Director.grid_map, i, j) == 0) 
+         and (ds_grid_get(obj_Director.grid_map, i, j + 1) == 1)) {
+         
+             instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), obj_Wall_Lab_Down);
+             instance_create((i * global.level_maker_speed), ((j + 1) * global.level_maker_speed), obj_Wall_Shadow);
+-            ds_grid_set(obj_Director.grid_map, i, j, 2);
++            ds_grid_set(obj_Director.grid_map, i, j, 10);
++        }
++        
++////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
++        
++        if ((ds_grid_get(obj_Director.grid_map, i, j) == 0) 
++        and (ds_grid_get(obj_Director.grid_map, i + 1, j) == 1)) {
++        
++            instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), obj_Wall_Lab_Right); 
++            ds_grid_set(obj_Director.grid_map, i, j, 12);
++        }
++        
++////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
++        
++        if ((ds_grid_get(obj_Director.grid_map, i, j) == 0) 
++        and (ds_grid_get(obj_Director.grid_map, i - 1, j) == 1)) {
++        
++            instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), obj_Wall_Lab_Left); 
++            ds_grid_set(obj_Director.grid_map, i, j, 13);
++        }
++        
++////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
++        
++    }
++}
++
++for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
++
++    for (j = 0; j &lt; obj_Director.grid_height; j += 1) {
++
++        if ((ds_grid_get(obj_Director.grid_map, i - 1, j) == 1) 
++        and (ds_grid_get(obj_Director.grid_map, i, j + 1) == 12)) {
++        
++            instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), obj_Wall_Lab_Right); 
++            ds_grid_set(obj_Director.grid_map, i, j, 12);
++        }
++        
++        if ((ds_grid_get(obj_Director.grid_map, i - 1, j) == 1) 
++        and (ds_grid_get(obj_Director.grid_map, i, j + 1) == 13)) {
++        
++            instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), obj_Wall_Lab_Left); 
++            ds_grid_set(obj_Director.grid_map, i, j, 13);
++        }
++    }
++}
++
++for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
++
++    for (j = 0; j &lt; obj_Director.grid_height; j += 1) {
++
++        if ((ds_grid_get(obj_Director.grid_map, i, j) == noone) 
++        and (ds_grid_get(obj_Director.grid_map, i + 1, j) == 10)
++        and (ds_grid_get(obj_Director.grid_map, i, j + 1) == 12)) {
++        
++            instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), obj_Wall_Lab_Right); 
++            ds_grid_set(obj_Director.grid_map, i, j, 12);
++        }
++        
++        if ((ds_grid_get(obj_Director.grid_map, i, j) == noone)
++        and (ds_grid_get(obj_Director.grid_map, i - 1, j) == 10) 
++        and (ds_grid_get(obj_Director.grid_map, i, j + 1) == 13)) {
++        
++            instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), obj_Wall_Lab_Left); 
++            ds_grid_set(obj_Director.grid_map, i, j, 13);
++        }
++    }
++}
++
++for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
++
++    for (j = 0; j &lt; obj_Director.grid_height; j += 1) {
++
++        if ((ds_grid_get(obj_Director.grid_map, i, j) == 0) 
++        and (ds_grid_get(obj_Director.grid_map, i, j - 1) == 1)) {
++        
++            instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), obj_Wall_Lab_Up); 
++            ds_grid_set(obj_Director.grid_map, i, j, 11);
+         }
+     }
+ }
