@@ -101,7 +101,7 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
         }
     }
 }
-/*
+
 //Wall Lab Up
 for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
 
@@ -115,7 +115,7 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
         }
     }
 }
-*/
+
 //Wall Lab Right
 for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
 
@@ -189,7 +189,7 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
         }
     }
 }
-/*
+
 //Wall Lab Right Up Corner
 for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
 
@@ -249,7 +249,7 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
         }
     }
 }
-/*
+
 for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
 
     for (j = 0; j &lt; obj_Director.grid_height; j += 1) {
