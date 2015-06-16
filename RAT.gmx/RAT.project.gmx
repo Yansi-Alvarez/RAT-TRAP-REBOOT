@@ -1168,11 +1168,7 @@
       <sprite>sprites\spr_Loading_Screen_Cheese_Inactive</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background">
-    <backgrounds name="Floors"/>
-    <backgrounds name="Background Tiles"/>
-    <backgrounds name="tests"/>
-  </backgrounds>
+  <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_find_distance_to_object.gml</script>
