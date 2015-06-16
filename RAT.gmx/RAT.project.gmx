@@ -745,6 +745,17 @@
               <sprite>sprites\spr_Spigtre_Head_Up_Right</sprite>
             </sprites>
           </sprites>
+          <sprites name="Beaglebub">
+            <sprite>sprites\Beaglebub_test</sprite>
+            <sprites name="Walking">
+              <sprite>sprites\spr_Beaglebub_Walking_Down_Left</sprite>
+              <sprite>sprites\spr_Beaglebub_Walking_Down_Right</sprite>
+            </sprites>
+            <sprites name="Idle">
+              <sprite>sprites\spr_Beaglebub_Idle_Down_Left</sprite>
+              <sprite>sprites\spr_Beaglebub_Idle_Down_Right</sprite>
+            </sprites>
+          </sprites>
         </sprites>
       </sprites>
     </sprites>
@@ -779,7 +790,7 @@
           <sprite>sprites\spr_Wall_Lab_Corner_Left_Up</sprite>
           <sprite>sprites\spr_Wall_Lab_Corner_Right_Down</sprite>
           <sprite>sprites\spr_Wall_Lab_Full</sprite>
-          <sprite>sprites\spr_Wall_Lab</sprite>
+          <sprite>sprites\spr_Wall_Lab_Alone</sprite>
           <sprite>sprites\spr_Wall_Lab_Down</sprite>
           <sprites name="Add ons">
             <sprite>sprites\spr_Wall_Lab_Addon_Pipe</sprite>
