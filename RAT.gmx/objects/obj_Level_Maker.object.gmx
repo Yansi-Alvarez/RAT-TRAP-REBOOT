@@ -68,20 +68,50 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
 
 ////////////////////////////////////////////////////////////////////////////////
 
+//Wall Lab Down
 for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
 
     for (j = 0; j &lt; obj_Director.grid_height; j += 1) {
     
         if ((ds_grid_get(obj_Director.grid_map, i, j) == 0) 
-        and (ds_grid_get(obj_Director.grid_map, i, j + 1) == 1)) {
+        and (ds_grid_get(obj_Director.grid_map, i, (j + 1)) == 1) and (ds_grid_get(obj_Director.grid_map, (i + 1), j) == 0) and (ds_grid_get(obj_Director.grid_map, (i - 1), j) != 1)) {
         
             instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), obj_Wall_Lab_Down);
+            instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), obj_Wall_Shadow);
             instance_create((i * global.level_maker_speed), ((j + 1) * global.level_maker_speed), obj_Wall_Shadow);
             ds_grid_set(obj_Director.grid_map, i, j, 2);
         }
     }
 }
 
+//Wall Lab Right
+for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
+
+    for (j = 0; j &lt; obj_Director.grid_height; j += 1) {
+    
+        if ((ds_grid_get(obj_Director.grid_map, i, j) == 0) 
+        and (ds_grid_get(obj_Director.grid_map, i + 1, j) == 1) and (ds_grid_get(obj_Director.grid_map, i, (j + 1)) == 0) and (ds_grid_get(obj_Director.grid_map, i, (j - 1)) != 1)) {
+        
+            instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), obj_Wall_Lab_Right);
+            ds_grid_set(obj_Director.grid_map, i, j, 2);
+        }
+    }
+}
+
+//Wall Lab Left
+for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
+
+    for (j = 0; j &lt; obj_Director.grid_height; j += 1) {
+    
+        if ((ds_grid_get(obj_Director.grid_map, i, j) == 0) 
+        and (ds_grid_get(obj_Director.grid_map, (i - 1), j) == 1) and (ds_grid_get(obj_Director.grid_map, i, (j + 1)) == 0) and (ds_grid_get(obj_Director.grid_map, i, (j - 1)) != 1)) {
+        
+            instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), obj_Wall_Lab_Left);
+            ds_grid_set(obj_Director.grid_map, i, j, 2);
+        }
+    }
+}
+/*
 for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
 
     for (j = 0; j &lt; obj_Director.grid_height; j += 1) {
@@ -126,7 +156,7 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
 }
 */
 ////////////////////////////////////////////////////////////////
-
+/*
 //Player Generation
 for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
 
@@ -212,7 +242,7 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
         and (ds_grid_get(obj_Director.grid_map, i + 5, j + 3) == 1) 
         and (ds_grid_get(obj_Director.grid_map, i + 5, j + 4) == 1))
         */
-        
+        /*
         and (spawn == true) {
         
             instance_create(((i + 1) * global.level_maker_speed), (j * global.level_maker_speed), obj_Rat_Head);
@@ -220,7 +250,7 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
             
         }
     }
-}
+}*/
 
 /*
 //Enemy Generation
