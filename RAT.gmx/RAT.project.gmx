@@ -783,6 +783,7 @@
       <sprites name="Walls">
         <sprites name="Lab">
           <sprite>sprites\spr_Wall_Lab_Right</sprite>
+          <sprite>sprites\spr_Wall_Lab_Left_Right</sprite>
           <sprite>sprites\spr_Wall_Lab_Left</sprite>
           <sprite>sprites\spr_Wall_Lab_Up</sprite>
           <sprite>sprites\spr_Wall_Lab_Corner_Right_Up</sprite>
