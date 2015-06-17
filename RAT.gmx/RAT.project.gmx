@@ -790,6 +790,8 @@
           <sprite>sprites\spr_Wall_Lab_Corner_Left_Down</sprite>
           <sprite>sprites\spr_Wall_Lab_Corner_Left_Up</sprite>
           <sprite>sprites\spr_Wall_Lab_Corner_Right_Down</sprite>
+          <sprite>sprites\spr_Wall_Lab_Intersection_Right</sprite>
+          <sprite>sprites\spr_Wall_Lab_Intersection_Left</sprite>
           <sprite>sprites\spr_Wall_Lab_Full</sprite>
           <sprite>sprites\spr_Wall_Lab_Alone</sprite>
           <sprite>sprites\spr_Wall_Lab_Down</sprite>
@@ -819,6 +821,9 @@
           <sprite>sprites\spr_Woods_Alt</sprite>
         </sprites>
         <sprite>sprites\spr_Wall_Shadow</sprite>
+        <sprite>sprites\spr_Wall_Shadow_Lab_Left</sprite>
+        <sprite>sprites\spr_Wall_Shadow_Lab_Right</sprite>
+        <sprite>sprites\spr_Wall_Shadow_Lab_Alone</sprite>
       </sprites>
       <sprites name="Floors">
         <sprites name="Tile">
