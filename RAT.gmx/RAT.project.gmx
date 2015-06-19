@@ -1246,6 +1246,8 @@
       <object>objects\obj_Particle_Hit</object>
       <object>objects\obj_Creation</object>
       <object>objects\obj_Bullet_Death</object>
+      <object>objects\obj_Sightline_Circle</object>
+      <object>objects\obj_Sightline_Square</object>
     </objects>
     <objects name="Melee">
       <objects name="One Handed Melee">

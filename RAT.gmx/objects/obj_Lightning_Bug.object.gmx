@@ -47,7 +47,7 @@ bullet = obj_Lightning_Bullet;
 
 bullet_speed = 5;
 
-cooldown = 20;
+cooldown = 50;
 
 experience = 10;
 </string>

@@ -769,6 +769,7 @@ if (gun_type == 1) {
             audio_play_sound(shooting_sound, 1, 0);
             object_bullet.direction = point_direction(obj_Rat_Head.x, obj_Rat_Head.y, mouse_x, mouse_y);
             instance_create(x + ldx, y + ldy, gun_flash);
+            instance_create((obj_Rat_Body.x - 10), obj_Rat_Body.y, obj_Sightline_Circle);
             object_bullet.speed = bullet_speed;
             potato_gun_bullet_timer = false;
             alarm[0] = cool_down;

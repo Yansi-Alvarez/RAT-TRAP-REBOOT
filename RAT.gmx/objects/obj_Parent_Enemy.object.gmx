@@ -262,17 +262,20 @@ direction_enemy = point_direction(obj_Parent_Enemy.x, obj_Parent_Enemy.y, obj_Ra
 
 motion_set(random(360), enemy_speed);
 
-/*
-if (distance_to_object(obj_Rat_Body) &lt;= 250) and (shoot == false){
+
+if (distance_to_object(obj_Rat_Body) &lt;= 150) and (shoot == false){
 
     object_bullet = instance_create(x, y, bullet);
     audio_play_sound(shooting_sound, 1, 0);
     object_bullet.direction = point_direction(x, y, obj_Rat_Body.x, obj_Rat_Body.y);
     object_bullet.speed = bullet_speed;
     shoot = true;
-    alarm[4] = cooldown;
+    if (!alarm[4]) {
+        
+        alarm[4] = cooldown;
+    }
 }
-*/
+
 /*
 //Old Bullbug code
 if (obj_Rat_Head.collision_with_enemy == true) {
@@ -344,14 +347,14 @@ if (distance_to_object(obj_Rat_Body) &lt;= 150) and (obj_Rat_Head.collision_with
     }
 }
 */
-
+/*
 if (place_meeting(x + (enemy_speed * 2), y, obj_Parent_Wall)
 or place_meeting(x + (enemy_speed * 2), y, obj_Parent_Wall) 
 or place_meeting(x + (enemy_speed * 2), y + (enemy_speed * 2), obj_Parent_Wall)) {
 
     speed = -enemy_speed;
 }
-
+*/
 if (death_animation == true) {
 
     instance_create(x, y, obj_Death);
@@ -374,7 +377,7 @@ if (enemy_death == true) {
        
        instance_destroy(); 
     }
-    
+    /*
     randomize();
     loot_spawn = irandom(50);
     
@@ -382,8 +385,31 @@ if (enemy_death == true) {
         
         instance_create(x, y, obj_Inter_Treasure_Normal);
         alarm[3] = 1;
-    }
+    }*/
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_Parent_Wall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>enemy_speed = -enemy_speed;
 </string>
           </argument>
         </arguments>
