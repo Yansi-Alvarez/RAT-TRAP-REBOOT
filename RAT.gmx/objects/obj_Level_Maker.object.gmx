@@ -333,7 +333,7 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
 }
 */
 ////////////////////////////////////////////////////////////////
-/*
+
 //Player Generation
 for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
 
@@ -410,7 +410,7 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
             
             if (enemy_spawn_chance &lt;= 50) {
         
-                instance_create((i * global.level_maker_speed) + 32, (j * global.level_maker_speed) + 32, obj_Lightning_Bug);
+                instance_create((i * global.level_maker_speed) + 32, (j * global.level_maker_speed) - 32, obj_Lightning_Bug);
             }
         }
     }

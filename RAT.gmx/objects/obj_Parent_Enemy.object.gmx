@@ -260,9 +260,8 @@ if (looping &gt;= 6) and (death_flash == true) {
 
 direction_enemy = point_direction(obj_Parent_Enemy.x, obj_Parent_Enemy.y, obj_Rat_Legs.x, obj_Rat_Legs.y)
 
-motion_set(random(360), enemy_speed);
-
-
+//motion_set(random(360), enemy_speed);
+/*
 if (distance_to_object(obj_Rat_Body) &lt;= 150) and (shoot == false){
 
     object_bullet = instance_create(x, y, bullet);
@@ -275,7 +274,7 @@ if (distance_to_object(obj_Rat_Body) &lt;= 150) and (shoot == false){
         alarm[4] = cooldown;
     }
 }
-
+*/
 /*
 //Old Bullbug code
 if (obj_Rat_Head.collision_with_enemy == true) {
