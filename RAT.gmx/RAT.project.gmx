@@ -636,6 +636,12 @@
           </sprites>
         </sprites>
       </sprites>
+      <sprites name="Bladebug">
+        <sprites name="animations">
+          <sprite>sprites\spr_Bladebug_Walking</sprite>
+        </sprites>
+        <sprite>sprites\Test_bladebug</sprite>
+      </sprites>
       <sprites name="Beesquito">
         <sprites name="Pieces">
           <sprite>sprites\spr_Beesquito</sprite>
@@ -777,6 +783,12 @@
         </sprites>
       </sprites>
       <sprite>sprites\spr_Gameover</sprite>
+      <sprites name="Terminal">
+        <sprite>sprites\spr_GUI_Terminal_Node_Open</sprite>
+        <sprite>sprites\spr_GUI_Terminal_Node_Closed</sprite>
+        <sprite>sprites\spr_GUI_Terminal_Player</sprite>
+        <sprite>sprites\spr_GUI_Terminal_Node_Link</sprite>
+      </sprites>
     </sprites>
     <sprites name="Stages">
       <sprite>sprites\Stage_Test_Tile</sprite>
