@@ -1218,6 +1218,7 @@
       <object>objects\obj_Loading_Screen</object>
       <object>objects\obj_Level_Up</object>
       <object>objects\obj_HUD_Display</object>
+      <object>objects\obj_Fade</object>
     </objects>
     <objects name="Weapons">
       <object>objects\obj_Parent_Gun</object>
