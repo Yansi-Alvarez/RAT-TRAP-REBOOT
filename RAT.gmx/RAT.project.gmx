@@ -1178,7 +1178,9 @@
       <sprite>sprites\spr_Loading_Screen_Cheese_Inactive</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bkgd_Black</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_find_distance_to_object.gml</script>
@@ -1340,9 +1342,9 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_Level_Generation</room>
     <room>rooms\rm_Title_Screen</room>
     <room>rooms\rm_Loading_Screen</room>
+    <room>rooms\rm_Level_Generation</room>
   </rooms>
   <constants number="2">
     <constant name="GM_build_date">42094.8957887616</constant>
