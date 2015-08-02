@@ -89,6 +89,14 @@ commence = true;
 
 //Cursor Code
 instance_create(room_width/2, room_height/2, obj_Cursor)
+
+//Code input
+
+global.seed_input = noone;
+
+code_slot_1 = "";
+code_slot_2 = "";
+code_slot_3 = "";
 </string>
           </argument>
         </arguments>
@@ -145,6 +153,10 @@ if (exit_room == true) and (terminal_room == false) and (cage_room == false) and
 
     game_end();
 }
+ 
+code_slot_1 = string_char_at(global.seed_input, 1);
+code_slot_2 = string_char_at(global.seed_input, 2);
+code_slot_3 = string_char_at(global.seed_input, 3);
 </string>
           </argument>
         </arguments>
@@ -183,23 +195,41 @@ if (commence == true) or (cage_room == true) or (terminal_room == true) {
 }
 
 if (cage_room == false) and (lab_room == false) {
-
+    /*
     draw_sprite(spr_Controls, 0, 525, 450);
     draw_text_ext_transformed_colour(300, 275, "Movement", separation, text_length_max, xscale_text, yscale_text, 0, text_color, text_color, text_color, text_color, alpha_value);
     draw_text_ext_transformed_colour(450, 350, "Left Click to Fire", separation, text_length_max, xscale_text, yscale_text, 0, text_color, text_color, text_color, text_color, alpha_value);
     draw_text_ext_transformed_colour(500, 575, "Equip Weapon", separation, text_length_max, xscale_text, yscale_text, 0, text_color, text_color, text_color, text_color, alpha_value);
     draw_text_ext_transformed_colour(400, 800, description, separation, text_length_max, xscale_text, yscale_text, 0, text_color, text_color, text_color, text_color, alpha_value);
+    */
+    
+    draw_sprite(spr_Controls, 0, 475, 400);
+    draw_text_ext_transformed_colour(250, 225, "Movement", separation, text_length_max, xscale_text, yscale_text, 0, text_color, text_color, text_color, text_color, alpha_value);
+    draw_text_ext_transformed_colour(400, 300, "Left Click to Fire", separation, text_length_max, xscale_text, yscale_text, 0, text_color, text_color, text_color, text_color, alpha_value);
+    draw_text_ext_transformed_colour(450, 525, "Equip Weapon", separation, text_length_max, xscale_text, yscale_text, 0, text_color, text_color, text_color, text_color, alpha_value);
+    draw_text_ext_transformed_colour(325, 150, description, separation, text_length_max, xscale_text, yscale_text, 0, text_color, text_color, text_color, text_color, alpha_value);
+    
+    //Code Input
+    keyboard_string = string_copy(string_upper(keyboard_string), 1, 3);
+    
+    draw_text_ext_transformed_colour(500, 800, keyboard_string, separation, text_length_max, xscale_text, yscale_text, 0, text_color, text_color, text_color, text_color, alpha_value);
+    
+    draw_text_ext_transformed_colour(400, 700, "Manual code entry prompt.", 3, 500, 1, 1, 0, c_lime, c_lime, c_lime, c_lime, 1);
+    draw_text_ext_transformed_colour(200, 730, "Enter a " + code_number + " letter code for generation. No digits or symbols.", 3, 900, 1, 1, 0, c_lime, c_lime, c_lime, c_lime, 1);
+    draw_rectangle_colour(300, 775, 800, 850, c_lime, c_lime, c_lime, c_lime, true);
+    //draw_text_ext_transformed_colour(9, 704, "&gt;", 3, 500, 1, 1, 0, c_lime, c_lime, c_lime, c_lime, 1);
+    
+    if (string_length(string_letters(keyboard_string)) &lt; string_length(keyboard_string)) and (keyboard_check_pressed(vk_enter)) { 
+    
+        draw_text_ext_transformed_colour(400, 900, "ERROR", 3, 500, 1, 1, 0, c_lime, c_lime, c_lime, c_lime, 1);
+    }
+    
+    if (string_length(string_letters(keyboard_string)) == code_number) and (keyboard_check_pressed(vk_enter)) { 
+    
+        global.seed_input = keyboard_string;
+    }
+
 }
-
-/*
-draw_text_ext_transformed_colour(3, 635, "Manual code entry prompt.", 3, 500, 1, 1, 0, c_lime, c_lime, c_lime, c_lime, 1);
-
-draw_text_ext_transformed_colour(3, 656, "Enter a " + code_number + " letter code for generation. No digits or symbols.", 3, 500, 1, 1, 0, c_lime, c_lime, c_lime, c_lime, 1);
-
-draw_rectangle_colour(3, 688, 850, 752, c_lime, c_lime, c_lime, c_lime, true);
-
-draw_text_ext_transformed_colour(9, 704, "&gt;", 3, 500, 1, 1, 0, c_lime, c_lime, c_lime, c_lime, 1);
-*/
 
 //interactive button menu starts here
 //outline
