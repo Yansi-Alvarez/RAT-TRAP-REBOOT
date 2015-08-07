@@ -72,6 +72,50 @@ global.first_level_maker_creation = false;
 
 ////////////////////////////////////////////////////////////////////////////////
 
+global.wall_right[0] = spr_Wall_Lab_Right;
+global.wall_down[0] = spr_Wall_Lab_Down;
+global.wall_left[0] = spr_Wall_Lab_Left;
+global.wall_up[0] = spr_Wall_Lab_Up;
+global.wall_left_right[0] = spr_Wall_Lab_Left_Right;
+global.wall_corner_right_up[0] = spr_Wall_Lab_Corner_Right_Up;
+global.wall_corner_left_up[0] = spr_Wall_Lab_Corner_Left_Up;
+global.wall_intersection_right[0] = spr_Wall_Lab_Intersection_Right;
+global.wall_intersection_left[0] = spr_Wall_Lab_Intersection_Left;
+global.wall_full[0] = spr_Wall_Lab_Full;
+global.wall_alone[0] = spr_Wall_Lab_Alone;
+global.wall_turn_left[0] = spr_Wall_Lab_Turn_Left;
+global.wall_turn_right[0] = spr_Wall_Lab_Turn_Right;
+
+global.wall_right[1] = spr_Wall_Server_Right;
+global.wall_down[1] = spr_Wall_Server_Down;
+global.wall_left[1] = spr_Wall_Server_Left;
+global.wall_up[1] = spr_Wall_Server_Up;
+global.wall_left_right[1] = spr_Wall_Server_Left_Right;
+global.wall_corner_right_up[1] = spr_Wall_Server_Corner_Right_Up;
+global.wall_corner_left_up[1] = spr_Wall_Server_Corner_Left_Up;
+global.wall_intersection_right[1] = spr_Wall_Server_Intersection_Right;
+global.wall_intersection_left[1] = spr_Wall_Server_Intersection_Left;
+global.wall_full[1] = spr_Wall_Server_Full;
+global.wall_alone[1] = spr_Wall_Server_Alone;
+global.wall_turn_left[1] = spr_Wall_Server_Turn_Left;
+global.wall_turn_right[1] = spr_Wall_Server_Turn_Right;
+/*
+global.wall_right[2] = spr_Wall_Server_Right;
+global.wall_down[2] = spr_Wall_Server_Down;
+global.wall_left[2] = spr_Wall_Server_Left;
+global.wall_up[2] = spr_Wall_Server_Up;
+global.wall_left_right[2] = spr_Wall_Server_Left_Right;
+global.wall_corner_right_up[2] = spr_Wall_Server_Corner_Right_Up;
+global.wall_corner_left_up[2] = spr_Wall_Server_Corner_Left_Up;
+global.wall_intersection_right[2] = spr_Wall_Server_Intersection_Right;
+global.wall_intersection_left[2] = spr_Wall_Server_Intersection_Left;
+global.wall_full[2] = spr_Wall_Server_Full;
+global.wall_alone[2] = spr_Wall_Server_Alone;
+global.wall_turn_left[2] = spr_Wall_Server_Turn_Left;
+global.wall_turn_right[2] = spr_Wall_Server_Turn_Right;
+*/
+////////////////////////////////////////////////////////////////////////////////
+
 grid_width = (room_width/global.level_maker_speed) + 1; //(2560/64) + 1 = 41
 grid_height = (room_height/global.level_maker_speed) + 1; //(1920/64) 1 = 31
 
