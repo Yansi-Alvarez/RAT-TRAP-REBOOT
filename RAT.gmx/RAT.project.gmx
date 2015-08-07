@@ -848,6 +848,23 @@
         <sprite>sprites\spr_Wall_Shadow_Lab_Down_Right</sprite>
         <sprite>sprites\spr_Wall_Shadow_Lab_Up_Right</sprite>
         <sprite>sprites\spr_Wall_Shadow_Lab_Alone</sprite>
+        <sprites name="Desert">
+          <sprite>sprites\spr_Wall_Desert_Down_TEST</sprite>
+          <sprite>sprites\spr_Wall_Desert_Right</sprite>
+          <sprite>sprites\spr_Wall_Desert_Corner_Right_Down</sprite>
+          <sprite>sprites\spr_Wall_Desert_Coner_Left_Down</sprite>
+          <sprite>sprites\spr_Wall_Desert_Corner_Right_Up</sprite>
+          <sprite>sprites\spr_Wall_Desert_Corner_Left_Up</sprite>
+          <sprite>sprites\spr_Wall_Desert_Intersection_Left</sprite>
+          <sprite>sprites\spr_Wall_Desert_Intersection_Right</sprite>
+          <sprite>sprites\spr_Wall_Desert_Left_Right</sprite>
+          <sprite>sprites\spr_Wall_Desert_Alone</sprite>
+          <sprite>sprites\spr_Wall_Desert_Turn_Left</sprite>
+          <sprite>sprites\spr_Wall_Desert_Turn_Right</sprite>
+          <sprite>sprites\spr_Wall_Desert_Left</sprite>
+          <sprite>sprites\spr_Wall_Desert_Down</sprite>
+          <sprite>sprites\spr_Wall_Desert_Full</sprite>
+        </sprites>
       </sprites>
       <sprites name="Floors">
         <sprites name="Tile">
@@ -878,6 +895,9 @@
           <sprite>sprites\spr_Grass</sprite>
           <sprite>sprites\spr_Grass_Alt</sprite>
           <sprite>sprites\spr_Grass_Alt_2</sprite>
+        </sprites>
+        <sprites name="Desert">
+          <sprite>sprites\spr_Sand</sprite>
         </sprites>
       </sprites>
       <sprites name="Home">
