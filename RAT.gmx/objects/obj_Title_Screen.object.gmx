@@ -29,7 +29,7 @@
 
 version_number = "1.0";
 
-code_number = "3";
+code_number = 3;
 
 title_screen_string = "Ratatosk Facilities Property [Version " + version_number + "]";
 
