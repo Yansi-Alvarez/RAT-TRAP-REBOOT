@@ -817,16 +817,26 @@
         <sprite>sprites\spr_Wall_Lab_Test</sprite>
         <sprites name="Server">
           <sprite>sprites\spr_Wall_Server_Test</sprite>
-          <sprite>sprites\spr_Wall_Server</sprite>
-          <sprite>sprites\spr_Wall_Server_Right_Alt</sprite>
+          <sprite>sprites\spr_Wall_Server_Down</sprite>
+          <sprite>sprites\spr_Wall_Server_Turn_Right</sprite>
+          <sprite>sprites\spr_Wall_Server_Alone</sprite>
+          <sprite>sprites\spr_Wall_Server_Turn_Left</sprite>
           <sprite>sprites\spr_Wall_Server_Right</sprite>
-          <sprite>sprites\spr_Wall_Server_Left__Alt</sprite>
-          <sprite>sprites\spr_Wall_Server_Left</sprite>
-          <sprite>sprites\spr_Wall_Server_Full</sprite>
-          <sprite>sprites\spr_Wall_Server_Up</sprite>
+          <sprite>sprites\spr_Wall_Server_Right_Down</sprite>
           <sprite>sprites\spr_Wall_Server_Corner_Right_Up</sprite>
           <sprite>sprites\spr_Wall_Server_Corner_Left_Up</sprite>
-          <sprite>sprites\spr_Wall_Full_Alt</sprite>
+          <sprite>sprites\spr_Wall_Server_Left</sprite>
+          <sprite>sprites\spr_Wall_Server_Intersection_Right</sprite>
+          <sprite>sprites\spr_Wall_Server_Intersection_Left</sprite>
+          <sprite>sprites\spr_Wall_Server_Left_Down</sprite>
+          <sprite>sprites\spr_Wall_Server_Left_Right</sprite>
+          <sprite>sprites\spr_Wall_Server_Full</sprite>
+          <sprite>sprites\spr_Wall_Server_Up</sprite>
+          <sprites name="Add ons">
+            <sprite>sprites\spr_Wall_Server_Addon_Plus</sprite>
+            <sprite>sprites\spr_Wall_Server_Addon_Minus</sprite>
+            <sprite>sprites\spr_Wall_Server_Addon_Fan</sprite>
+          </sprites>
         </sprites>
         <sprites name="Woods">
           <sprite>sprites\spr_Woods</sprite>

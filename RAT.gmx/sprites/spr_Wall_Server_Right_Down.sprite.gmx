@@ -20,6 +20,6 @@
   <width>64</width>
   <height>64</height>
   <frames>
-    <frame index="0">images\spr_Wall_Server_Left__Alt_0.png</frame>
+    <frame index="0">images\spr_Wall_Server_Right_Down_0.png</frame>
   </frames>
 </sprite>
