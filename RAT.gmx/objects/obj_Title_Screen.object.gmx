@@ -29,7 +29,9 @@
 
 version_number = "1.0";
 
-code_number = 3;
+code_number = "3";
+
+code_number_length = 3;
 
 title_screen_string = "Ratatosk Facilities Property [Version " + version_number + "]";
 
@@ -87,12 +89,15 @@ lab_room = false;
 
 commence = true;
 
+code_entry = false;
+
 //Cursor Code
 instance_create(room_width/2, room_height/2, obj_Cursor)
 
 //Code input
 
 global.seed_input = noone;
+global.wall_input = noone;
 
 code_slot_1 = "";
 code_slot_2 = "";
@@ -142,9 +147,10 @@ inst_lab = collision_rectangle((room_width - (room_width/6)), draw_text_y2 + (((
 
 inst_start = collision_rectangle((room_width - (room_width/6)), draw_text_y2 + (((round(room_width/12) + draw_text_y2) - (draw_text_y2)) * 6), (room_width - (room_width/32)), (round(room_width/12) + draw_text_y2) + (((round(room_width/12) + draw_text_y2) - (draw_text_y2)) * 6), obj_Cursor, false, true);
 
-if (start_room == true) and (exit_room == false) and (terminal_room == false) and (cage_room == false) {
+if ((start_room == true) and (exit_room == false) and (terminal_room == false) and (cage_room == false)) or (code_entry == true) {
 
     room_goto(1);
+    code_entry = false;
 }
 
 inst_exit = collision_rectangle((room_width - (room_width/6)), draw_text_y2 + (((round(room_width/12) + draw_text_y2) - (draw_text_y2)) * 7), (room_width - (room_width/32)), (round(room_width/12) + draw_text_y2) + (((round(room_width/12) + draw_text_y2) - (draw_text_y2)) * 7), obj_Cursor, false, true);
@@ -153,10 +159,6 @@ if (exit_room == true) and (terminal_room == false) and (cage_room == false) and
 
     game_end();
 }
- 
-code_slot_1 = string_char_at(global.seed_input, 1);
-code_slot_2 = string_char_at(global.seed_input, 2);
-code_slot_3 = string_char_at(global.seed_input, 3);
 </string>
           </argument>
         </arguments>
@@ -195,13 +197,6 @@ if (commence == true) or (cage_room == true) or (terminal_room == true) {
 }
 
 if (cage_room == false) and (lab_room == false) {
-    /*
-    draw_sprite(spr_Controls, 0, 525, 450);
-    draw_text_ext_transformed_colour(300, 275, "Movement", separation, text_length_max, xscale_text, yscale_text, 0, text_color, text_color, text_color, text_color, alpha_value);
-    draw_text_ext_transformed_colour(450, 350, "Left Click to Fire", separation, text_length_max, xscale_text, yscale_text, 0, text_color, text_color, text_color, text_color, alpha_value);
-    draw_text_ext_transformed_colour(500, 575, "Equip Weapon", separation, text_length_max, xscale_text, yscale_text, 0, text_color, text_color, text_color, text_color, alpha_value);
-    draw_text_ext_transformed_colour(400, 800, description, separation, text_length_max, xscale_text, yscale_text, 0, text_color, text_color, text_color, text_color, alpha_value);
-    */
     
     draw_sprite(spr_Controls, 0, 475, 400);
     draw_text_ext_transformed_colour(250, 225, "Movement", separation, text_length_max, xscale_text, yscale_text, 0, text_color, text_color, text_color, text_color, alpha_value);
@@ -224,9 +219,72 @@ if (cage_room == false) and (lab_room == false) {
         draw_text_ext_transformed_colour(400, 900, "ERROR", 3, 500, 1, 1, 0, c_lime, c_lime, c_lime, c_lime, 1);
     }
     
-    if (string_length(string_letters(keyboard_string)) == code_number) and (keyboard_check_pressed(vk_enter)) { 
+    if (string_length(string_letters(keyboard_string)) == code_number_length) and (keyboard_check_pressed(vk_enter)) { 
     
         global.seed_input = keyboard_string;
+        
+        code_slot_1 = string_char_at(global.seed_input, 1);
+        code_slot_2 = string_char_at(global.seed_input, 2);
+        code_slot_3 = string_char_at(global.seed_input, 3);
+        
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        //Slot for the walls
+        
+        if (code_slot_1 == ("Q") or ("W") or ("E") or ("R") or ("A") or ("S") or ("D") or ("F")) {
+        
+            global.wall_input = 0;
+        }
+        
+        if (code_slot_1 == ("Y") or ("U") or ("I") or ("O") or ("P") or ("H") or ("J") or ("K") or ("L")) {
+        
+            global.wall_input = 1;
+        }
+        
+        if (code_slot_1 == ("T") or ("G") or ("Z") or ("X") or ("C") or ("V") or ("B") or ("N") or ("M")) {
+        
+            global.wall_input = 2;
+        }
+        
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////
+        /*
+        //Slot for the 
+        
+        if (code_slot_2 == ("q") || ("w") || ("e") || ("r") || ("a") || ("s") || ("d") || ("f")) {
+        
+            global.wall_input = 0;
+        }
+        
+        if (code_slot_2 == ("y") || ("u") || ("i") || ("o") || ("p") || ("h") || ("j") || ("k") || ("l")) {
+        
+            global.wall_input = 1;
+        }
+        
+        if (code_slot_2 == ("t") || ("g") || ("z") || ("x") || ("c") || ("v") || ("b") || ("n") || ("m")) {
+        
+            global.wall_input = 2;
+        }
+        
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        //Slot for the 
+        
+        if (code_slot_3 == ("q") || ("w") || ("e") || ("r") || ("a") || ("s") || ("d") || ("f")) {
+        
+            global.wall_input = 0;
+        }
+        
+        if (code_slot_3 == ("y") || ("u") || ("i") || ("o") || ("p") || ("h") || ("j") || ("k") || ("l")) {
+        
+            global.wall_input = 1;
+        }
+        
+        if (code_slot_3 == ("t") || ("g") || ("z") || ("x") || ("c") || ("v") || ("b") || ("n") || ("m")) {
+        
+            global.wall_input = 2;
+        }*/
+        
+        code_entry = true;
     }
 
 }

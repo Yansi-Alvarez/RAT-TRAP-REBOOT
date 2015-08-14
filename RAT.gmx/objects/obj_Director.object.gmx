@@ -25,15 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Variable to know when level is done being made
-globalvar finished_level_generation;
-
-global.generation = true;
-
-//Initializing the variable to equal zero, showing it is yet to be finished
-finished_level_generation = 0;
-
-//Creating a new level every time the game starts up
+            <string>//Creating a new level every time the game starts up
 randomize();
 
 //Size of the grid used to generate the objects, it is 64 since
@@ -72,48 +64,49 @@ global.first_level_maker_creation = false;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-global.wall_right[0] = spr_Wall_Lab_Right;
-global.wall_down[0] = spr_Wall_Lab_Down;
-global.wall_left[0] = spr_Wall_Lab_Left;
-global.wall_up[0] = spr_Wall_Lab_Up;
-global.wall_left_right[0] = spr_Wall_Lab_Left_Right;
-global.wall_corner_right_up[0] = spr_Wall_Lab_Corner_Right_Up;
-global.wall_corner_left_up[0] = spr_Wall_Lab_Corner_Left_Up;
-global.wall_intersection_right[0] = spr_Wall_Lab_Intersection_Right;
-global.wall_intersection_left[0] = spr_Wall_Lab_Intersection_Left;
-global.wall_full[0] = spr_Wall_Lab_Full;
-global.wall_alone[0] = spr_Wall_Lab_Alone;
-global.wall_turn_left[0] = spr_Wall_Lab_Turn_Left;
-global.wall_turn_right[0] = spr_Wall_Lab_Turn_Right;
+global.wall_right[0] = obj_Wall_Lab_Right;
+global.wall_down[0] = obj_Wall_Lab_Down;
+global.wall_left[0] = obj_Wall_Lab_Left;
+global.wall_left_right[0] = obj_Wall_Lab_Left_Right;
+global.wall_corner_right_up[0] = obj_Wall_Lab_Corner_Right_Up;
+global.wall_corner_left_up[0] = obj_Wall_Lab_Corner_Left_Up;
+global.wall_intersection_right[0] = obj_Wall_Lab_Intersection_Right;
+global.wall_intersection_left[0] = obj_Wall_Lab_Intersection_Left;
+global.wall_full[0] = obj_Wall_Lab_Full;
+global.wall_alone[0] = obj_Wall_Lab_Alone;
+global.wall_turn_left[0] = obj_Wall_Lab_Turn_Left;
+global.wall_turn_right[0] = obj_Wall_Lab_Turn_Right;
 
-global.wall_right[1] = spr_Wall_Server_Right;
-global.wall_down[1] = spr_Wall_Server_Down;
-global.wall_left[1] = spr_Wall_Server_Left;
-global.wall_up[1] = spr_Wall_Server_Up;
-global.wall_left_right[1] = spr_Wall_Server_Left_Right;
-global.wall_corner_right_up[1] = spr_Wall_Server_Corner_Right_Up;
-global.wall_corner_left_up[1] = spr_Wall_Server_Corner_Left_Up;
-global.wall_intersection_right[1] = spr_Wall_Server_Intersection_Right;
-global.wall_intersection_left[1] = spr_Wall_Server_Intersection_Left;
-global.wall_full[1] = spr_Wall_Server_Full;
-global.wall_alone[1] = spr_Wall_Server_Alone;
-global.wall_turn_left[1] = spr_Wall_Server_Turn_Left;
-global.wall_turn_right[1] = spr_Wall_Server_Turn_Right;
-/*
-global.wall_right[2] = spr_Wall_Server_Right;
-global.wall_down[2] = spr_Wall_Server_Down;
-global.wall_left[2] = spr_Wall_Server_Left;
-global.wall_up[2] = spr_Wall_Server_Up;
-global.wall_left_right[2] = spr_Wall_Server_Left_Right;
-global.wall_corner_right_up[2] = spr_Wall_Server_Corner_Right_Up;
-global.wall_corner_left_up[2] = spr_Wall_Server_Corner_Left_Up;
-global.wall_intersection_right[2] = spr_Wall_Server_Intersection_Right;
-global.wall_intersection_left[2] = spr_Wall_Server_Intersection_Left;
-global.wall_full[2] = spr_Wall_Server_Full;
-global.wall_alone[2] = spr_Wall_Server_Alone;
-global.wall_turn_left[2] = spr_Wall_Server_Turn_Left;
-global.wall_turn_right[2] = spr_Wall_Server_Turn_Right;
-*/
+global.wall_right[1] = obj_Wall_Server_Right;
+global.wall_down[1] = obj_Wall_Server_Down;
+global.wall_left[1] = obj_Wall_Server_Left;
+global.wall_left_right[1] = obj_Wall_Server_Left_Right;
+global.wall_corner_right_up[1] = obj_Wall_Server_Corner_Right_Up;
+global.wall_corner_left_up[1] = obj_Wall_Server_Corner_Left_Up;
+global.wall_intersection_right[1] = obj_Wall_Server_Intersection_Right;
+global.wall_intersection_left[1] = obj_Wall_Server_Intersection_Left;
+global.wall_full[1] = obj_Wall_Server_Full;
+global.wall_alone[1] = obj_Wall_Server_Alone;
+global.wall_turn_left[1] = obj_Wall_Server_Turn_Left;
+global.wall_turn_right[1] = obj_Wall_Server_Turn_Right;
+
+global.wall_right[2] = obj_Wall_Desert_Right;
+global.wall_down[2] = obj_Wall_Desert_Down;
+global.wall_left[2] = obj_Wall_Desert_Left;
+global.wall_left_right[2] = obj_Wall_Desert_Left_Right;
+global.wall_corner_right_up[2] = obj_Wall_Desert_Corner_Right_Up;
+global.wall_corner_left_up[2] = obj_Wall_Desert_Corner_Left_Up;
+global.wall_intersection_right[2] = obj_Wall_Desert_Intersection_Right;
+global.wall_intersection_left[2] = obj_Wall_Desert_Intersection_Left;
+global.wall_full[2] = obj_Wall_Desert_Full;
+global.wall_alone[2] = obj_Wall_Desert_Alone;
+global.wall_turn_left[2] = obj_Wall_Desert_Turn_Left;
+global.wall_turn_right[2] = obj_Wall_Desert_Turn_Right;
+
+global.level_floor[0] = obj_Concrete_Floor;
+//global.level_floor[1] = obj_Concrete;
+global.level_floor[2] = obj_Sand;
+
 ////////////////////////////////////////////////////////////////////////////////
 
 grid_width = (room_width/global.level_maker_speed) + 1; //(2560/64) + 1 = 41

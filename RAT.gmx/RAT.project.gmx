@@ -1327,12 +1327,9 @@
         <objects name="Lab">
           <object>objects\obj_Wall_Lab_Left</object>
           <object>objects\obj_Wall_Lab_Right</object>
-          <object>objects\obj_Wall_Lab_Up</object>
           <object>objects\obj_Wall_Lab_Down</object>
           <object>objects\obj_Wall_Lab_Corner_Right_Up</object>
-          <object>objects\obj_Wall_Lab_Corner_Right_Down</object>
           <object>objects\obj_Wall_Lab_Corner_Left_Up</object>
-          <object>objects\obj_Wall_Lab_Corner_Left_Down</object>
           <object>objects\obj_Wall_Lab_Full</object>
           <object>objects\obj_Wall_Lab_Turn_Right</object>
           <object>objects\obj_Wall_Lab_Turn_Left</object>
@@ -1341,12 +1338,42 @@
           <object>objects\obj_Wall_Lab_Intersection_Left</object>
           <object>objects\obj_Wall_Lab_Intersection_Right</object>
         </objects>
-        <object>objects\obj_Wall_Shadow</object>
-        <object>objects\obj_Wall_Shadow_Lab_Up_Right</object>
-        <object>objects\obj_Wall_Shadow_Lab_Alone</object>
-        <object>objects\obj_Wall_Shadow_Lab_Down_Right</object>
-        <object>objects\obj_Wall_Shadow_Lab_Up_Left</object>
-        <object>objects\obj_Wall_Shadow_Lab_Down_Left</object>
+        <objects name="Shadows">
+          <object>objects\obj_Wall_Shadow</object>
+          <object>objects\obj_Wall_Shadow_Lab_Up_Right</object>
+          <object>objects\obj_Wall_Shadow_Lab_Alone</object>
+          <object>objects\obj_Wall_Shadow_Lab_Down_Right</object>
+          <object>objects\obj_Wall_Shadow_Lab_Up_Left</object>
+          <object>objects\obj_Wall_Shadow_Lab_Down_Left</object>
+        </objects>
+        <objects name="Server">
+          <object>objects\obj_Wall_Server_Left</object>
+          <object>objects\obj_Wall_Server_Right</object>
+          <object>objects\obj_Wall_Server_Down</object>
+          <object>objects\obj_Wall_Server_Corner_Right_Up</object>
+          <object>objects\obj_Wall_Server_Corner_Left_Up</object>
+          <object>objects\obj_Wall_Server_Full</object>
+          <object>objects\obj_Wall_Server_Turn_Right</object>
+          <object>objects\obj_Wall_Server_Turn_Left</object>
+          <object>objects\obj_Wall_Server_Alone</object>
+          <object>objects\obj_Wall_Server_Left_Right</object>
+          <object>objects\obj_Wall_Server_Intersection_Left</object>
+          <object>objects\obj_Wall_Server_Intersection_Right</object>
+        </objects>
+        <objects name="Desert">
+          <object>objects\obj_Wall_Desert_Left</object>
+          <object>objects\obj_Wall_Desert_Right</object>
+          <object>objects\obj_Wall_Desert_Down</object>
+          <object>objects\obj_Wall_Desert_Corner_Right_Up</object>
+          <object>objects\obj_Wall_Desert_Corner_Left_Up</object>
+          <object>objects\obj_Wall_Desert_Full</object>
+          <object>objects\obj_Wall_Desert_Turn_Right</object>
+          <object>objects\obj_Wall_Desert_Turn_Left</object>
+          <object>objects\obj_Wall_Desert_Alone</object>
+          <object>objects\obj_Wall_Desert_Left_Right</object>
+          <object>objects\obj_Wall_Desert_Intersection_Left</object>
+          <object>objects\obj_Wall_Desert_Intersection_Right</object>
+        </objects>
       </objects>
       <objects name="Floors">
         <object>objects\obj_Parent_Floor</object>
@@ -1354,6 +1381,9 @@
           <object>objects\obj_Concrete_Floor</object>
           <object>objects\obj_Concrete_Floor_Alt</object>
           <object>objects\obj_Concrete_Floor_Alt_2</object>
+        </objects>
+        <objects name="Sand">
+          <object>objects\obj_Sand</object>
         </objects>
       </objects>
       <objects name="Traps">
