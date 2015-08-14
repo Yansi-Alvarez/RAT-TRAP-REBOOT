@@ -641,6 +641,10 @@
           <sprite>sprites\spr_Bladebug_Walking</sprite>
         </sprites>
         <sprite>sprites\Test_bladebug</sprite>
+        <sprites name="Parts">
+          <sprite>sprites\spr_Bladebug_Blades</sprite>
+          <sprite>sprites\spr_Bladebug_Eyes</sprite>
+        </sprites>
       </sprites>
       <sprites name="Beesquito">
         <sprites name="Pieces">
@@ -1008,6 +1012,8 @@
         </sprites>
         <sprites name="Melee">
           <sprite>sprites\spr_Particle_Slash_Left_Test</sprite>
+          <sprite>sprites\spr_Particle_Slash_Small_Left</sprite>
+          <sprite>sprites\spr_Particle_Slash_Small_Right</sprite>
           <sprite>sprites\spr_Particle_Slash_Right</sprite>
           <sprite>sprites\spr_Particle_Slash_Left</sprite>
         </sprites>
