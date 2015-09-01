@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Creating a new level every time the game starts up
+            <string>terminal = true;
+
+//Creating a new level every time the game starts up
 randomize();
 
 //Size of the grid used to generate the objects, it is 64 since
@@ -281,6 +283,33 @@ for (i = (grid_width_index); (i &gt;= 0); i--) {
 instance_create(global.center_room_width, global.center_room_height, obj_Level_Maker);
 
 ////////////////////////////////////////////////////////////////////////////////
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if !instance_exists(obj_Parent_Enemy) and (terminal == true) {
+    
+    instance_create(obj_Rat_Legs.x, obj_Rat_Legs.y, obj_Terminal);
+    terminal = false;
+}
 </string>
           </argument>
         </arguments>
