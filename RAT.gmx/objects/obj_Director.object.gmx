@@ -106,7 +106,7 @@ global.wall_turn_left[2] = obj_Wall_Desert_Turn_Left;
 global.wall_turn_right[2] = obj_Wall_Desert_Turn_Right;
 
 global.level_floor[0] = obj_Concrete_Floor;
-//global.level_floor[1] = obj_Concrete;
+global.level_floor[1] = obj_Concrete_Floor;
 global.level_floor[2] = obj_Sand;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -305,11 +305,12 @@ instance_create(global.center_room_width, global.center_room_height, obj_Level_M
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !instance_exists(obj_Parent_Enemy) and (terminal == true) {
+            <string>/*if !instance_exists(obj_Parent_Enemy) and (terminal == true) {
     
     instance_create(obj_Rat_Legs.x, obj_Rat_Legs.y, obj_Terminal);
     terminal = false;
 }
+*/
 </string>
           </argument>
         </arguments>

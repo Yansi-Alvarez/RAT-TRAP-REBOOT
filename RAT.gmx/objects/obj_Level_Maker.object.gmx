@@ -37,7 +37,7 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
     
         if (ds_grid_get(obj_Director.grid_map, i, j) == 1) {
         
-            instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), global.level_floor[2]); 
+            instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), global.level_floor[global.wall_input]); 
         }
     }
 }
@@ -373,6 +373,57 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
         }
     }
 }
+
+// Normal Mode:
+
+//Defeat all the enemies in the level
+
+//if ( global.mission_input == 1 )
+//{
+    /*
+    //Enemy Generation
+    for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
+    
+        for (j = 0; j &lt; obj_Director.grid_height; j += 1) {
+            
+            //randomize();
+            enemy_spawn_chance = irandom(1000); 
+            
+            if (ds_grid_get(obj_Director.grid_map, i, j) == 1) {
+                
+                if (enemy_spawn_chance &lt;= 50) {
+            
+                    instance_create((i * global.level_maker_speed) + 32, (j * global.level_maker_speed) - 32, obj_Lightning_Bug);
+                }
+            }
+        }
+    }*/
+//}
+
+// Cardkey Mode:
+
+//Find the cardkey and place it in the machine
+/*
+else if ( global.mission_input == 2 )
+{
+    for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
+    
+        for (j = 0; j &lt; obj_Director.grid_height; j += 1) {
+        
+        }
+    }
+           
+}
+
+// Survival Mode (Timed):
+
+//Find the cardkey and place it in the machine
+
+else if ( global.mission_input == 3 )
+{
+
+}
+*/
 /*
 //Enemy Generation
 for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
@@ -391,6 +442,8 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
         }
     }
 }*/
+
+instance_create( 0, 0, obj_Clock);
 </string>
           </argument>
         </arguments>

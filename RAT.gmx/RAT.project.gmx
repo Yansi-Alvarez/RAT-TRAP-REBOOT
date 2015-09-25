@@ -1257,6 +1257,7 @@
       <object>objects\obj_Level_Up</object>
       <object>objects\obj_HUD_Display</object>
       <object>objects\obj_Fade</object>
+      <object>objects\obj_Clock</object>
     </objects>
     <objects name="Weapons">
       <object>objects\obj_Parent_Gun</object>
@@ -1326,8 +1327,6 @@
         <object>objects\obj_Pipe</object>
         <object>objects\prop_Crate</object>
       </objects>
-      <object>objects\obj_Director</object>
-      <object>objects\obj_Level_Maker</object>
       <objects name="Walls">
         <object>objects\obj_Parent_Wall</object>
         <objects name="Lab">
@@ -1396,6 +1395,8 @@
         <object>objects\obj_Parent_Trap</object>
         <object>objects\obj_Spike_Trap</object>
       </objects>
+      <object>objects\obj_Director</object>
+      <object>objects\obj_Level_Maker</object>
     </objects>
     <objects name="Interactables">
       <object>objects\obj_Teleporter</object>
@@ -1405,9 +1406,8 @@
         <object>objects\obj_Inter_Treasure_Normal</object>
       </objects>
       <objects name="Machine">
-        <object>objects\obj_Inter_Machine_On</object>
         <object>objects\obj_Inter_Passkey</object>
-        <object>objects\obj_Intr_Machine_Off</object>
+        <object>objects\obj_Intr_Machine</object>
         <object>objects\obj_Terminal</object>
       </objects>
       <objects name="Health">

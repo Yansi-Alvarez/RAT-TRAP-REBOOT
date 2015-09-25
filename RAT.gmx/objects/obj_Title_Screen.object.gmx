@@ -98,6 +98,7 @@ instance_create(room_width/2, room_height/2, obj_Cursor)
 
 global.seed_input = noone;
 global.wall_input = noone;
+global.mission_input = noone;
 
 code_slot_1 = "";
 code_slot_2 = "";
@@ -247,24 +248,24 @@ if (cage_room == false) and (lab_room == false) {
         }
         
         ///////////////////////////////////////////////////////////////////////////////////////////////////////
-        /*
-        //Slot for the 
+        
+        //Slot for the mission type
         
         if (code_slot_2 == ("q") || ("w") || ("e") || ("r") || ("a") || ("s") || ("d") || ("f")) {
         
-            global.wall_input = 0;
+            global.mission_input = 0;
         }
         
         if (code_slot_2 == ("y") || ("u") || ("i") || ("o") || ("p") || ("h") || ("j") || ("k") || ("l")) {
         
-            global.wall_input = 1;
+            global.mission_input = 1;
         }
         
         if (code_slot_2 == ("t") || ("g") || ("z") || ("x") || ("c") || ("v") || ("b") || ("n") || ("m")) {
         
-            global.wall_input = 2;
+            global.mission_input = 2;
         }
-        
+        /*
         ///////////////////////////////////////////////////////////////////////////////////////////////////////
         
         //Slot for the 

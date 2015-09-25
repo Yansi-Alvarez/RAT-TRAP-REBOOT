@@ -85,13 +85,13 @@ screen_jiggle = noone;
 //4 laser weapon (laster)
 //5 automatc (shotgun)
 
-text = noone;
-popup_width = noone;
-popup_padding = noone;
-draw_below = noone;
-font = noone;
-font_color = noone; 
-bak_color = noone;
+text_gun = noone;
+popup_width_gun = noone;
+popup_padding_gun = noone;
+draw_below_gun = noone;
+font_gun = noone;
+font_color_gun = noone; 
+bak_color_gun = noone;
 
 //////////////////////////////////////////////////////
 
@@ -1197,10 +1197,10 @@ if (!place_meeting(x, y, obj_Rat_Body)) { //and (weapon_picked_up == false) and 
 
 if (place_meeting(x, y, obj_Rat_Body) and (obj_Gun_In_Use.weapon_picked_up == false) and (obj_Gun_In_Use.equipped = false)) {
 
-    draw_set_font(font);
-    draw_set_color(font_color);    
+    draw_set_font(font_gun);
+    draw_set_color(font_color_gun);    
     
-    scr_draw_messagebox(text, popup_width, popup_padding, self, bak_color, draw_below);
+    scr_draw_messagebox(text_gun, popup_width_gun, popup_padding_gun, self, bak_color_gun, draw_below_gun);
     equip_text_box = true;
 }
 
