@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>seconds = 59;
+
+seconds_time = noone;
 
 minutes = 4;
 
@@ -80,36 +82,31 @@ timer = true;
     alarm[0] = room_speed;
 }
 
-if ( seconds &lt;= 1 )
+if ( seconds = -1 )
 {
     minutes -= 1
-    seconds = 0;
+    seconds = 59;
 }
 
-if ( minutes == 0 ) and ( seconds &lt;= 1 )
+if ( minutes = 0 ) and ( seconds &lt;= 1 )
 {   
     minutes = 0;
     seconds = 0;
     timer = false;
 }
-/*
-if ( minutes &lt; 10 ) or ( seconds &lt; 10 )
+
+if ( seconds &lt; 10 ) 
 {
-    draw_text_colour( (view_xview[0] + 200), (view_yview[0] + 10), string(((minutes &lt; 10) * 0)) + string(minutes) + 
-    " : " + string(((seconds &lt; 10) * 0)) + string(seconds), c_lime, c_lime, c_lime, c_lime, 1 );
+    seconds_time = string(((seconds &lt; 10) * 0)) + string(seconds);
 }
 
-if ( minutes &lt; 10 ) 
+else 
 {
-    draw_text_colour( (view_xview[0] + 200), (view_yview[0] + 10), string(((minutes &lt; 10) * 0)) + string(minutes) + 
-    " : " + string(seconds), c_lime, c_lime, c_lime, c_lime, 1 );
+    seconds_time = string(seconds);
 }
-*/
-//if ( seconds &lt; 10 ) 
-//{
-    draw_text_colour( (view_xview[0] + 200), (view_yview[0] + 10), string(((minutes &lt; 10) * 0)) + string(minutes) + 
-    " : " + string(((seconds &lt; 10) * 0)) + string(seconds), c_lime, c_lime, c_lime, c_lime, 1 );
-//}
+
+draw_text_colour( (view_xview[0] + 200), (view_yview[0] + 10), string(((minutes &lt; 10) * 0)) + string(minutes) + 
+                    " : " + seconds_time, c_lime, c_lime, c_lime, c_lime, 1 );
 </string>
           </argument>
         </arguments>
