@@ -795,6 +795,7 @@
         <sprite>sprites\spr_GUI_Terminal_Node_Link</sprite>
       </sprites>
       <sprite>sprites\INVENTORY_MOCKUP</sprite>
+      <sprite>sprites\HUD_MOCKUP</sprite>
     </sprites>
     <sprites name="Stages">
       <sprite>sprites\Stage_Test_Tile</sprite>
@@ -873,21 +874,6 @@
         </sprites>
       </sprites>
       <sprites name="Floors">
-        <sprites name="Tile">
-          <sprite>sprites\spr_Tile</sprite>
-          <sprite>sprites\spr_Tile_Upper_Right</sprite>
-          <sprite>sprites\spr_Tile_Upper_Left</sprite>
-          <sprite>sprites\spr_Tile_Bottom_Left</sprite>
-          <sprite>sprites\spr_Tile_Bottom_Right</sprite>
-          <sprite>sprites\spr_Tile_Bottom</sprite>
-          <sprite>sprites\spr_Tile_Right</sprite>
-          <sprite>sprites\spr_Tile_Left</sprite>
-          <sprite>sprites\spr_Tile_Top</sprite>
-          <sprite>sprites\spr_Tile_Corner_Upper_Right</sprite>
-          <sprite>sprites\spr_Tile_Corner_Upper_Left</sprite>
-          <sprite>sprites\spr_Tile_Corner_Bottom_Right</sprite>
-          <sprite>sprites\spr_Tile_Corner_Bottom_Left</sprite>
-        </sprites>
         <sprites name="Concrete">
           <sprite>sprites\spr_Concrete</sprite>
           <sprite>sprites\spr_Concrete_Alt_2</sprite>
