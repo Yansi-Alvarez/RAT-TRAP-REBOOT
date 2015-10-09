@@ -232,40 +232,63 @@ if (cage_room == false) and (lab_room == false) {
         
         //Slot for the walls
         
-        if (code_slot_1 == ("Q") or ("W") or ("E") or ("R") or ("A") or ("S") or ("D") or ("F")) {
+        if (code_slot_1 == ("Q")) or 
+        (code_slot_1 == ("W")) or
+        (code_slot_1 == ("E")) or
+        (code_slot_1 == ("R")) or
+        (code_slot_1 == ("A")) or
+        (code_slot_1 == ("S")) or
+        (code_slot_1 == ("D")) or
+        (code_slot_1 == ("F")) {
         
             global.wall_input = 0;
         }
         
-        if (code_slot_1 == ("Y") or ("U") or ("I") or ("O") or ("P") or ("H") or ("J") or ("K") or ("L")) {
+        if (code_slot_1 == ("Y")) or
+        (code_slot_1 == ("U")) or 
+        (code_slot_1 == ("I")) or
+        (code_slot_1 == ("O")) or
+        (code_slot_1 == ("P")) or
+        (code_slot_1 == ("H")) or
+        (code_slot_1 == ("J")) or
+        (code_slot_1 == ("K")) or
+        (code_slot_1 == ("L")) {
         
             global.wall_input = 1;
         }
         
-        if (code_slot_1 == ("T") or ("G") or ("Z") or ("X") or ("C") or ("V") or ("B") or ("N") or ("M")) {
+        if (code_slot_1 == ("T")) or
+        (code_slot_1 == ("G")) or
+        (code_slot_1 == ("Z")) or
+        (code_slot_1 == ("X")) or
+        (code_slot_1 == ("C")) or
+        (code_slot_1 == ("V")) or
+        (code_slot_1 == ("B")) or
+        (code_slot_1 == ("N")) or
+        (code_slot_1 == ("M")) {
         
             global.wall_input = 2;
         }
         
         ///////////////////////////////////////////////////////////////////////////////////////////////////////
-        
+        /*
         //Slot for the mission type
         
-        if (code_slot_2 == ("q") || ("w") || ("e") || ("r") || ("a") || ("s") || ("d") || ("f")) {
+        if (code_slot_2 == ("Q") or ("W") or ("E") or ("R") or ("A") or ("S") or ("D") or ("F")) {
         
             global.mission_input = 0;
         }
         
-        if (code_slot_2 == ("y") || ("u") || ("i") || ("o") || ("p") || ("h") || ("j") || ("k") || ("l")) {
+        if (code_slot_2 == ("Y") or ("U") or ("I") or ("O") or ("P") or ("H") or ("J") or ("K") or ("L")) {
         
             global.mission_input = 1;
         }
         
-        if (code_slot_2 == ("t") || ("g") || ("z") || ("x") || ("c") || ("v") || ("b") || ("n") || ("m")) {
+        if (code_slot_2 == ("T") or ("G") or ("Z") or ("X") or ("C") or ("V") or ("B") or ("N") or ("M")) {
         
             global.mission_input = 2;
         }
-        /*
+        
         ///////////////////////////////////////////////////////////////////////////////////////////////////////
         
         //Slot for the 
