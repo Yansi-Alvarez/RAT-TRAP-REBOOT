@@ -891,6 +891,9 @@
         <sprites name="Desert">
           <sprite>sprites\spr_Sand</sprite>
         </sprites>
+        <sprites name="Steel">
+          <sprite>sprites\spr_Steel</sprite>
+        </sprites>
       </sprites>
       <sprites name="Home">
         <sprites name="Cage">
