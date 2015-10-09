@@ -931,11 +931,17 @@
       </sprites>
       <sprites name="Props">
         <sprite>sprites\spr_Props_Example</sprite>
-        <sprite>sprites\spr_Prop_Shelves_Right</sprite>
-        <sprite>sprites\spr_Prop_Shelves_Left</sprite>
-        <sprite>sprites\spr_Prop_Bread</sprite>
-        <sprite>sprites\spr_Prop_Server</sprite>
-        <sprite>sprites\spr_Prop_Pipe</sprite>
+        <sprites name="Lab">
+          <sprite>sprites\spr_Prop_Shelves_Right</sprite>
+          <sprite>sprites\spr_Prop_Shelves_Left</sprite>
+          <sprite>sprites\spr_Prop_Server</sprite>
+          <sprite>sprites\spr_Prop_Pipe</sprite>
+          <sprite>sprites\spr_Prop_Bread</sprite>
+        </sprites>
+        <sprites name="Desert">
+          <sprite>sprites\spr_Prop_Cactus_Small</sprite>
+          <sprite>sprites\spr_Prop_Cactus_Large</sprite>
+        </sprites>
         <sprite>sprites\spr_Prop_Crate</sprite>
       </sprites>
     </sprites>
@@ -1043,12 +1049,20 @@
             <sprite>sprites\spr_Boomerang_HUD</sprite>
             <sprite>sprites\spr_Boomerang_Pickup</sprite>
           </sprites>
+          <sprites name="Mjolnir">
+            <sprite>sprites\spr_Mjolnir_Right</sprite>
+            <sprite>sprites\spr_Mjolnir_HUD</sprite>
+            <sprite>sprites\spr_Mjolnir_Pickup</sprite>
+            <sprite>sprites\spr_Mjolnir_Left</sprite>
+          </sprites>
         </sprites>
         <sprites name="Two-Handed">
-          <sprite>sprites\spr_Morningstar_Left</sprite>
-          <sprite>sprites\spr_Morningstar_Right</sprite>
-          <sprite>sprites\sprite336</sprite>
-          <sprite>sprites\spr_Morningstar_Pickup</sprite>
+          <sprites name="Morningstar">
+            <sprite>sprites\spr_Morningstar_Left</sprite>
+            <sprite>sprites\spr_Morningstar_Right</sprite>
+            <sprite>sprites\spr_Morningstar_HUD</sprite>
+            <sprite>sprites\spr_Morningstar_Pickup</sprite>
+          </sprites>
         </sprites>
       </sprites>
       <sprites name="Ranged">
