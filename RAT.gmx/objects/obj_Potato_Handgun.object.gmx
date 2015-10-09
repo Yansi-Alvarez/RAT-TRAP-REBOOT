@@ -37,6 +37,8 @@ sprite_index_Left_Gun_In_Use_Pick_Up = spr_Handgun_Potato_Pickup_Left;
 
 sprite_index_Right_Gun_In_Use_Pick_Up = spr_Handgun_Potato_Pickup_Right;
 
+sprite_index_Gun_Hud = spr_Handgun_Potato_HUD;
+
 potato_gun_bullet_timer = true;
 
 bullet_speed = 10;
@@ -70,7 +72,7 @@ sprite_index = choose(spr_Handgun_Potato_Pickup_Right, spr_Handgun_Potato_Pickup
 screen_jiggle = false;
 
 text_gun = "Press E to equip [Potato Handgun]";
-popup_width_gun = string_width(text_gun);
+popup_width_gun = 125;//string_width(text_gun);
 popup_padding_gun = 3;
 draw_below_gun = false;
 font_gun = Game_Font;

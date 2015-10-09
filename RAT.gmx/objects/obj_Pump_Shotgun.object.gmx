@@ -33,7 +33,11 @@ sprite_index_Right_Gun_In_Use = spr_Shotgun_Pump_Right;
 
 sprite_index_Left_Gun_In_Use = spr_Shotgun_Pump_Left;
 
-sprite_index_Gun_In_Use_Pick_Up = spr_Shotgun_Pump_Pickup;
+sprite_index_Left_Gun_In_Use_Pick_Up = spr_Shotgun_Pump_Pickup_Left;
+
+sprite_index_Right_Gun_In_Use_Pick_Up = spr_Shotgun_Pump_Pickup_Right;
+
+sprite_index_Gun_Hud = spr_Shotgun_Pump_HUD;
 
 potato_gun_bullet_timer = true;
 

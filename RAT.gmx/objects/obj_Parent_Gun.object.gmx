@@ -35,6 +35,8 @@ sprite_index_Left_Gun_In_Use_Pick_Up = noone;
 
 sprite_index_Right_Gun_In_Use_Pick_Up = noone;
 
+sprite_index_Gun_Hud = noone;
+
 potato_gun_bullet_timer = true;
 
 correction = noone;
@@ -1197,7 +1199,7 @@ if (!place_meeting(x, y, obj_Rat_Body)) { //and (weapon_picked_up == false) and 
 
 if (place_meeting(x, y, obj_Rat_Body) and (obj_Gun_In_Use.weapon_picked_up == false) and (obj_Gun_In_Use.equipped = false)) {
 
-    //draw_set_font(font_gun);
+    draw_set_font(font_gun);
     draw_set_color(font_color_gun);    
     
     scr_draw_messagebox(text_gun, popup_width_gun, popup_padding_gun, self, bak_color_gun, draw_below_gun);
@@ -1206,13 +1208,13 @@ if (place_meeting(x, y, obj_Rat_Body) and (obj_Gun_In_Use.weapon_picked_up == fa
 
 
 if ((global.weapon_attach_left_arm == true) or (global.weapon_attach_right_arm = true)) {
-
-    draw_text_colour((view_xview[0] + 90),(view_yview[0] + 10), ( string(obj_Rat_Body.weapon_equipped.ammo) + " \ " ), c_lime, c_lime, c_lime, c_lime, 1);
     
-    //draw_set_font(Game_Font);
+    draw_set_font(Game_Font);
     //draw_set_halign(fa_center);
     //draw_set_valign(fa_middle);
-    draw_text_colour((view_xview[0] + 140),(view_yview[0] + 10), string(obj_Rat_Body.weapon_equipped.ammo_reserve), c_lime, c_lime, c_lime, c_lime, 1);
+    draw_text_colour((view_xview[0] + 500),(view_yview[0] + 10), ( "[ " + string(obj_Rat_Body.weapon_equipped.ammo) + "\" ), c_lime, c_lime, c_lime, c_lime, 1);
+    draw_text_colour((view_xview[0] + 530),(view_yview[0] + 10), string(obj_Rat_Body.weapon_equipped.ammo_reserve) + " ]", c_lime, c_lime, c_lime, c_lime, 1);
+    draw_sprite(sprite_index_Gun_Hud, 0, (view_xview[0] + 515),(view_yview[0] + 35));
 }
 
 if ((sprite_index == sprite_index_Left_Gun_In_Use_Pick_Up) or (sprite_index == sprite_index_Right_Gun_In_Use_Pick_Up)) {

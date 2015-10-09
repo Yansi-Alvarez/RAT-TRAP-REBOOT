@@ -37,6 +37,8 @@ sprite_index_Left_Gun_In_Use_Pick_Up = spr_Handgun_Beretta_Pickup_Left;
 
 sprite_index_Right_Gun_In_Use_Pick_Up = spr_Handgun_Beretta_Pickup_Right;
 
+sprite_index_Gun_Hud = spr_Handgun_Beretta_HUD;
+
 potato_gun_bullet_timer = true;
 
 bullet_speed = 50;
