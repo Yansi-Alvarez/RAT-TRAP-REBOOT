@@ -1271,6 +1271,7 @@
       <object>objects\obj_Level_Up</object>
       <object>objects\obj_HUD_Display</object>
       <object>objects\obj_Fade</object>
+      <object>objects\obj_Clock</object>
     </objects>
     <objects name="Weapons">
       <object>objects\obj_Parent_Gun</object>
@@ -1340,19 +1341,14 @@
         <object>objects\obj_Pipe</object>
         <object>objects\prop_Crate</object>
       </objects>
-      <object>objects\obj_Director</object>
-      <object>objects\obj_Level_Maker</object>
       <objects name="Walls">
         <object>objects\obj_Parent_Wall</object>
         <objects name="Lab">
           <object>objects\obj_Wall_Lab_Left</object>
           <object>objects\obj_Wall_Lab_Right</object>
-          <object>objects\obj_Wall_Lab_Up</object>
           <object>objects\obj_Wall_Lab_Down</object>
           <object>objects\obj_Wall_Lab_Corner_Right_Up</object>
-          <object>objects\obj_Wall_Lab_Corner_Right_Down</object>
           <object>objects\obj_Wall_Lab_Corner_Left_Up</object>
-          <object>objects\obj_Wall_Lab_Corner_Left_Down</object>
           <object>objects\obj_Wall_Lab_Full</object>
           <object>objects\obj_Wall_Lab_Turn_Right</object>
           <object>objects\obj_Wall_Lab_Turn_Left</object>
@@ -1361,12 +1357,42 @@
           <object>objects\obj_Wall_Lab_Intersection_Left</object>
           <object>objects\obj_Wall_Lab_Intersection_Right</object>
         </objects>
-        <object>objects\obj_Wall_Shadow</object>
-        <object>objects\obj_Wall_Shadow_Lab_Up_Right</object>
-        <object>objects\obj_Wall_Shadow_Lab_Alone</object>
-        <object>objects\obj_Wall_Shadow_Lab_Down_Right</object>
-        <object>objects\obj_Wall_Shadow_Lab_Up_Left</object>
-        <object>objects\obj_Wall_Shadow_Lab_Down_Left</object>
+        <objects name="Shadows">
+          <object>objects\obj_Wall_Shadow</object>
+          <object>objects\obj_Wall_Shadow_Lab_Up_Right</object>
+          <object>objects\obj_Wall_Shadow_Lab_Alone</object>
+          <object>objects\obj_Wall_Shadow_Lab_Down_Right</object>
+          <object>objects\obj_Wall_Shadow_Lab_Up_Left</object>
+          <object>objects\obj_Wall_Shadow_Lab_Down_Left</object>
+        </objects>
+        <objects name="Server">
+          <object>objects\obj_Wall_Server_Left</object>
+          <object>objects\obj_Wall_Server_Right</object>
+          <object>objects\obj_Wall_Server_Down</object>
+          <object>objects\obj_Wall_Server_Corner_Right_Up</object>
+          <object>objects\obj_Wall_Server_Corner_Left_Up</object>
+          <object>objects\obj_Wall_Server_Full</object>
+          <object>objects\obj_Wall_Server_Turn_Right</object>
+          <object>objects\obj_Wall_Server_Turn_Left</object>
+          <object>objects\obj_Wall_Server_Alone</object>
+          <object>objects\obj_Wall_Server_Left_Right</object>
+          <object>objects\obj_Wall_Server_Intersection_Left</object>
+          <object>objects\obj_Wall_Server_Intersection_Right</object>
+        </objects>
+        <objects name="Desert">
+          <object>objects\obj_Wall_Desert_Left</object>
+          <object>objects\obj_Wall_Desert_Right</object>
+          <object>objects\obj_Wall_Desert_Down</object>
+          <object>objects\obj_Wall_Desert_Corner_Right_Up</object>
+          <object>objects\obj_Wall_Desert_Corner_Left_Up</object>
+          <object>objects\obj_Wall_Desert_Full</object>
+          <object>objects\obj_Wall_Desert_Turn_Right</object>
+          <object>objects\obj_Wall_Desert_Turn_Left</object>
+          <object>objects\obj_Wall_Desert_Alone</object>
+          <object>objects\obj_Wall_Desert_Left_Right</object>
+          <object>objects\obj_Wall_Desert_Intersection_Left</object>
+          <object>objects\obj_Wall_Desert_Intersection_Right</object>
+        </objects>
       </objects>
       <objects name="Floors">
         <object>objects\obj_Parent_Floor</object>
@@ -1375,11 +1401,16 @@
           <object>objects\obj_Concrete_Floor_Alt</object>
           <object>objects\obj_Concrete_Floor_Alt_2</object>
         </objects>
+        <objects name="Sand">
+          <object>objects\obj_Sand</object>
+        </objects>
       </objects>
       <objects name="Traps">
         <object>objects\obj_Parent_Trap</object>
         <object>objects\obj_Spike_Trap</object>
       </objects>
+      <object>objects\obj_Director</object>
+      <object>objects\obj_Level_Maker</object>
     </objects>
     <objects name="Interactables">
       <object>objects\obj_Teleporter</object>
@@ -1389,9 +1420,9 @@
         <object>objects\obj_Inter_Treasure_Normal</object>
       </objects>
       <objects name="Machine">
-        <object>objects\obj_Inter_Machine_On</object>
         <object>objects\obj_Inter_Passkey</object>
-        <object>objects\obj_Intr_Machine_Off</object>
+        <object>objects\obj_Intr_Machine</object>
+        <object>objects\obj_Terminal</object>
       </objects>
       <objects name="Health">
         <object>objects\obj_Pickup_Cheese</object>

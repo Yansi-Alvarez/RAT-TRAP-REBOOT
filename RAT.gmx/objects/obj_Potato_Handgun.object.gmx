@@ -69,13 +69,13 @@ sprite_index = choose(spr_Handgun_Potato_Pickup_Right, spr_Handgun_Potato_Pickup
 
 screen_jiggle = false;
 
-text = "Press E to equip [Potato Handgun]";
-popup_width = string_width(text);
-popup_padding = 3;
-draw_below = false;
-font = Game_Font;
-font_color = c_lime; 
-bak_color = c_black;
+text_gun = "Press E to equip [Potato Handgun]";
+popup_width_gun = string_width(text_gun);
+popup_padding_gun = 3;
+draw_below_gun = false;
+font_gun = Game_Font;
+font_color_gun = c_lime; 
+bak_color_gun = c_black;
 </string>
           </argument>
         </arguments>

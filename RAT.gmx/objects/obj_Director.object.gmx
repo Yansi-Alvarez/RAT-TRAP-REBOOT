@@ -25,13 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Variable to know when level is done being made
-globalvar finished_level_generation;
-
-global.generation = true;
-
-//Initializing the variable to equal zero, showing it is yet to be finished
-finished_level_generation = 0;
+            <string>terminal = true;
 
 //Creating a new level every time the game starts up
 randomize();
@@ -69,6 +63,51 @@ global.create_central_room = false;
 global.create_boundary = false;
 
 global.first_level_maker_creation = false;
+
+////////////////////////////////////////////////////////////////////////////////
+
+global.wall_right[0] = obj_Wall_Lab_Right;
+global.wall_down[0] = obj_Wall_Lab_Down;
+global.wall_left[0] = obj_Wall_Lab_Left;
+global.wall_left_right[0] = obj_Wall_Lab_Left_Right;
+global.wall_corner_right_up[0] = obj_Wall_Lab_Corner_Right_Up;
+global.wall_corner_left_up[0] = obj_Wall_Lab_Corner_Left_Up;
+global.wall_intersection_right[0] = obj_Wall_Lab_Intersection_Right;
+global.wall_intersection_left[0] = obj_Wall_Lab_Intersection_Left;
+global.wall_full[0] = obj_Wall_Lab_Full;
+global.wall_alone[0] = obj_Wall_Lab_Alone;
+global.wall_turn_left[0] = obj_Wall_Lab_Turn_Left;
+global.wall_turn_right[0] = obj_Wall_Lab_Turn_Right;
+
+global.wall_right[1] = obj_Wall_Server_Right;
+global.wall_down[1] = obj_Wall_Server_Down;
+global.wall_left[1] = obj_Wall_Server_Left;
+global.wall_left_right[1] = obj_Wall_Server_Left_Right;
+global.wall_corner_right_up[1] = obj_Wall_Server_Corner_Right_Up;
+global.wall_corner_left_up[1] = obj_Wall_Server_Corner_Left_Up;
+global.wall_intersection_right[1] = obj_Wall_Server_Intersection_Right;
+global.wall_intersection_left[1] = obj_Wall_Server_Intersection_Left;
+global.wall_full[1] = obj_Wall_Server_Full;
+global.wall_alone[1] = obj_Wall_Server_Alone;
+global.wall_turn_left[1] = obj_Wall_Server_Turn_Left;
+global.wall_turn_right[1] = obj_Wall_Server_Turn_Right;
+
+global.wall_right[2] = obj_Wall_Desert_Right;
+global.wall_down[2] = obj_Wall_Desert_Down;
+global.wall_left[2] = obj_Wall_Desert_Left;
+global.wall_left_right[2] = obj_Wall_Desert_Left_Right;
+global.wall_corner_right_up[2] = obj_Wall_Desert_Corner_Right_Up;
+global.wall_corner_left_up[2] = obj_Wall_Desert_Corner_Left_Up;
+global.wall_intersection_right[2] = obj_Wall_Desert_Intersection_Right;
+global.wall_intersection_left[2] = obj_Wall_Desert_Intersection_Left;
+global.wall_full[2] = obj_Wall_Desert_Full;
+global.wall_alone[2] = obj_Wall_Desert_Alone;
+global.wall_turn_left[2] = obj_Wall_Desert_Turn_Left;
+global.wall_turn_right[2] = obj_Wall_Desert_Turn_Right;
+
+global.level_floor[0] = obj_Concrete_Floor;
+global.level_floor[1] = obj_Concrete_Floor;
+global.level_floor[2] = obj_Sand;
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -244,6 +283,34 @@ for (i = (grid_width_index); (i &gt;= 0); i--) {
 instance_create(global.center_room_width, global.center_room_height, obj_Level_Maker);
 
 ////////////////////////////////////////////////////////////////////////////////
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/*if !instance_exists(obj_Parent_Enemy) and (terminal == true) {
+    
+    instance_create(obj_Rat_Legs.x, obj_Rat_Legs.y, obj_Terminal);
+    terminal = false;
+}
+*/
 </string>
           </argument>
         </arguments>
