@@ -785,6 +785,8 @@
           <sprite>sprites\spr_Ammo_Icon_Handgun</sprite>
           <sprite>sprites\spr_Ammo_Icon_Shotgun</sprite>
           <sprite>sprites\AMMO_MOCKUP</sprite>
+          <sprite>sprites\spr_Ammo_Bracket_Left</sprite>
+          <sprite>sprites\spr_Ammo_Bracket_Right</sprite>
         </sprites>
       </sprites>
       <sprite>sprites\spr_Gameover</sprite>
@@ -798,7 +800,6 @@
       <sprite>sprites\HUD_MOCKUP</sprite>
     </sprites>
     <sprites name="Stages">
-      <sprite>sprites\Stage_Test_Tile</sprite>
       <sprites name="Walls">
         <sprites name="Lab">
           <sprite>sprites\spr_Wall_Lab_Right</sprite>
