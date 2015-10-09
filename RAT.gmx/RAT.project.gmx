@@ -1396,6 +1396,9 @@
         <objects name="Sand">
           <object>objects\obj_Sand</object>
         </objects>
+        <objects name="Steel">
+          <object>objects\obj_Steel</object>
+        </objects>
       </objects>
       <objects name="Traps">
         <object>objects\obj_Parent_Trap</object>
