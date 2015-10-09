@@ -784,6 +784,7 @@
           <sprite>sprites\spr_Ammo_Hud</sprite>
           <sprite>sprites\spr_Ammo_Icon_Handgun</sprite>
           <sprite>sprites\spr_Ammo_Icon_Shotgun</sprite>
+          <sprite>sprites\AMMO_MOCKUP</sprite>
         </sprites>
       </sprites>
       <sprite>sprites\spr_Gameover</sprite>
@@ -793,6 +794,7 @@
         <sprite>sprites\spr_GUI_Terminal_Player</sprite>
         <sprite>sprites\spr_GUI_Terminal_Node_Link</sprite>
       </sprites>
+      <sprite>sprites\INVENTORY_MOCKUP</sprite>
     </sprites>
     <sprites name="Stages">
       <sprite>sprites\Stage_Test_Tile</sprite>
