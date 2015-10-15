@@ -1234,6 +1234,10 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bkgd_Black</background>
+    <background>background\bkgd_Cage</background>
+    <background>background\bkgd_Upgrade</background>
+    <background>background\bkgd_HUD</background>
+    <background>background\bkgd_Title</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
