@@ -133,7 +133,7 @@ MyYear = string(date_get_year(date_current_datetime()));
 
 clock_string = MyHour + ' : ' + MyMinute;
 
-date_string = MyMonth + ' / ' + MyDay + ' / ' + MyYear;
+date_string = MyMonth + '/' + MyDay + '/' + MyYear;
 
 obj_Cursor.x = mouse_x;
 obj_Cursor.y = mouse_y;

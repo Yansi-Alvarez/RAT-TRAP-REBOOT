@@ -1326,6 +1326,7 @@
         <object>objects\obj_AR15</object>
         <object>objects\obj_P90</object>
         <object>objects\obj_Laser_Rifle</object>
+        <object>objects\obj_Lapua</object>
       </objects>
     </objects>
     <objects name="Projectiles">
@@ -1436,6 +1437,9 @@
         </objects>
         <objects name="Sand">
           <object>objects\obj_Sand</object>
+        </objects>
+        <objects name="Steel">
+          <object>objects\obj_Steel</object>
         </objects>
       </objects>
       <objects name="Traps">

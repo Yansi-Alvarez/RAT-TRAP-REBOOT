@@ -106,7 +106,7 @@ global.wall_turn_left[2] = obj_Wall_Desert_Turn_Left;
 global.wall_turn_right[2] = obj_Wall_Desert_Turn_Right;
 
 global.level_floor[0] = obj_Concrete_Floor;
-global.level_floor[1] = obj_Concrete_Floor;
+global.level_floor[1] = obj_Steel;
 global.level_floor[2] = obj_Sand;
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -5,9 +5,177 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_Parent_Gun</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited();
+
+obj_Gun_In_Use = obj_Magnum;
+
+sprite_index_Right_Gun_In_Use_Equipped = spr_Handgun_Magnum_Right;
+
+sprite_index_Left_Gun_In_Use_Equipped = spr_Handgun_Magnum_Left;
+
+sprite_index_Left_Gun_In_Use_Pick_Up = spr_Handgun_Magnum_Pickup_Left;
+
+sprite_index_Right_Gun_In_Use_Pick_Up = spr_Handgun_Magnum_Pickup_Right;
+
+sprite_index_Gun_Hud = spr_Handgun_Magnum_HUD;
+
+potato_gun_bullet_timer = true;
+
+bullet_speed = 70;
+
+bullet = obj_Handgun_Bullet;
+
+gun_type = 1;
+
+shooting_sound = snd_Handgun;
+
+cool_down = 20;
+
+correction = 160;
+
+correction_2 = 200;
+
+ldx = 0;
+
+ldy = 0;
+
+gun_flash = obj_Muzzle_Flash;
+
+ammo = 6;
+
+ammo_capacity = 6;
+
+ammo_reserve = 100;
+
+sprite_index = choose(spr_Handgun_Magnum_Pickup_Right, spr_Handgun_Magnum_Pickup_Left);
+
+screen_jiggle = true;
+
+text_gun = "Press E to equip [Magnum]";
+popup_width_gun = 125;//string_width(text_gun);
+popup_padding_gun = 3;
+draw_below_gun = false;
+font_gun = Game_Font;
+font_color_gun = c_lime; 
+bak_color_gun = c_black;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>

@@ -37,6 +37,8 @@ sprite_index_Left_Gun_In_Use_Pick_Up = spr_Rifle_AR15_Pickup_Left;
 
 sprite_index_Right_Gun_In_Use_Pick_Up = spr_Rifle_AR15_Pickup_Right;
 
+sprite_index_Gun_Hud = spr_Rifle_AR15_HUD;
+
 potato_gun_bullet_timer = true;
 
 bullet_speed = 40;
@@ -73,13 +75,13 @@ ammo_capacity = 6;
 
 ammo_reserve = 180;
 
-text = "Press E to equip [AR15]";
-popup_width = string_width(text);
-popup_padding = 3;
-draw_below = false;
-font = Game_Font;
-font_color = c_lime; 
-bak_color = c_black;
+text_gun = "Press E to equip [AR15]";
+popup_width_gun = 125//string_width(text);
+popup_padding_gun = 3;
+draw_below_gun = false;
+font_gun = Game_Font;
+font_color_gun = c_lime; 
+bak_color_gun = c_black;
 </string>
           </argument>
         </arguments>
