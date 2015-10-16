@@ -86,7 +86,7 @@ instance_create(obj_Rat_Head.x + 50, obj_Rat_Head.y + 50, obj_Lapua);
 instance_create(obj_Rat_Head.x + 75, obj_Rat_Head.y + 50, obj_Pump_Shotgun);
 */
 
-instance_create(obj_Rat_Head.x + 100, obj_Rat_Head.y, obj_Laser_Rifle);
+instance_create(obj_Rat_Head.x + 50, obj_Rat_Head.y, obj_Laser_Rifle);
 //instance_create(obj_Rat_Head.x + 150, obj_Rat_Head.y + 200, obj_Bullbug)
 /*
 instance_create(obj_Rat_Head.x + 150, obj_Rat_Head.y + 220, obj_Bullbug)

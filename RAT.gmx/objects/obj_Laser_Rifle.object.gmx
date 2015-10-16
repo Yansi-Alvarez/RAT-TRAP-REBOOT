@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_Parent_Gun</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+
+image_speed = 0.3;
 
 obj_Gun_In_Use = obj_Laser_Rifle;
 
@@ -53,17 +55,21 @@ bullet_speed = 30;
 
 cool_down = 20;
 
-//charging_sound = snd_Laser_Change;
+//charging_sound = snd_Laser_Charge;
 
-charging_speed = 0.1;
+charging_speed = 0.5;
+
+ammo = 3;
+
+ammo_capacity = 3;
+
+ammo_reserve = 50;
 
 shooting_sound = snd_Laser_Cannon;
 
 gun_charging_animation_left = spr_Rifle_Laser_Charging_Left;
 
 gun_charging_animation_right = spr_Rifle_Laser_Charging_Right;
-
-index_size = gun_charging_animation_left.image_index;
 
 gun_fully_charged_animation_left = spr_Rifle_Laser_Fully_Charged_Left;
 
@@ -78,29 +84,6 @@ draw_below_gun = false;
 font_gun = Game_Font;
 font_color_gun = c_lime; 
 bak_color_gun = c_black;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="5">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>event_inherited();
 </string>
           </argument>
         </arguments>
@@ -192,7 +175,7 @@ bak_color_gun = c_black;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited();
+            <string>//event_inherited();
 </string>
           </argument>
         </arguments>
