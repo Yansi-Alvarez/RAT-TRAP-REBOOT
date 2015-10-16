@@ -76,7 +76,7 @@ instance_create(mouse_x, mouse_y, obj_Cursor)
 //global.enemy_activation = true;
 
 //instance_create(obj_Rat_Head.x + 100,obj_Rat_Head.y,obj_Sword)
-
+/*
 instance_create(obj_Rat_Head.x + 50, obj_Rat_Head.y, obj_Potato_Handgun);
 instance_create(obj_Rat_Head.x + 75, obj_Rat_Head.y, obj_Beretta);
 instance_create(obj_Rat_Head.x, obj_Rat_Head.y + 50, obj_P90);
@@ -84,7 +84,9 @@ instance_create(obj_Rat_Head.x, obj_Rat_Head.y + 75, obj_AR15);
 instance_create(obj_Rat_Head.x + 50, obj_Rat_Head.y + 75, obj_Magnum);
 instance_create(obj_Rat_Head.x + 50, obj_Rat_Head.y + 50, obj_Lapua);
 instance_create(obj_Rat_Head.x + 75, obj_Rat_Head.y + 50, obj_Pump_Shotgun);
+*/
 
+instance_create(obj_Rat_Head.x + 100, obj_Rat_Head.y, obj_Laser_Rifle);
 //instance_create(obj_Rat_Head.x + 150, obj_Rat_Head.y + 200, obj_Bullbug)
 /*
 instance_create(obj_Rat_Head.x + 150, obj_Rat_Head.y + 220, obj_Bullbug)

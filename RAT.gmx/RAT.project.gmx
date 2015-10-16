@@ -1133,7 +1133,9 @@
             <sprite>sprites\spr_Rifle_Laser_Pickup_Left</sprite>
             <sprites name="Animations">
               <sprite>sprites\spr_Rifle_Laser_Charging_Left</sprite>
+              <sprite>sprites\spr_Rifle_Laser_Fully_Charged_Left</sprite>
               <sprite>sprites\spr_Rifle_Laser_Charging_Right</sprite>
+              <sprite>sprites\spr_Rifle_Laser_Fully_Charged_Right</sprite>
             </sprites>
           </sprites>
           <sprites name="Lapua Sniper">

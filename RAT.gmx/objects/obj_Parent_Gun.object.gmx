@@ -134,7 +134,7 @@ flip_float = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//image_xscale;
+            <string>//image_xscale += 0.1;
 </string>
           </argument>
         </arguments>
@@ -884,20 +884,20 @@ if (gun_type == 4) {
             //audio_play_sound(charging_sound, 1, 0);
             other.image_speed = charging_speed;
 
-            if (mouse_check_button_released(mb_left)) and (other.image_index = index_size) {
+            if (mouse_check_button_released(mb_left)) and ((other.sprite_index == gun_fully_charged_animation_left) or (other.sprite_index == gun_fully_charged_animation_left)){
                 
                 other.object_bullet = instance_create(x, y, bullet);
                 audio_play_sound(shooting_sound, 1, 0);
                 other.object_bullet.direction = point_direction(obj_Rat_Head.x, obj_Rat_Head.y, mouse_x, mouse_y);
                 other.object_bullet.speed = bullet_speed;
-                //alarm[5] = 10;
                 //scr_find_distance_to_object(x, y, point_direction(obj_Rat_Head.x, obj_Rat_Head.y, mouse_x, mouse_y), object, point_distance(obj_Parent_Gun.x, obj_Parent_Gun.y, mouse_x, mouse_y));
                 other.potato_gun_bullet_timer = false;
                 alarm[0] = cool_down;
                 ammo -= 1;
+                alarm[5] = 10;
             }
             
-            if ((mouse_check_button_released(mb_left)) and (other.image_index &lt; index_size)) {
+            if ((mouse_check_button_released(mb_left)) and (gun_charging_animation_left.image_index &lt; index_size)) {
                 
                 other.potato_gun_bullet_timer = false;
             }
@@ -1220,6 +1220,37 @@ and ((global.weapon_attach_right_arm = true) or (global.weapon_attach_left_arm =
     }
     
     floating = false;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if ( sprite_index == gun_charging_animation_left ) {
+    
+    sprite_index = gun_fully_charged_animation_left;
+}
+
+if ( sprite_index == gun_charging_animation_right ) {
+    
+    sprite_index = gun_fully_charged_animation_right;
 }
 </string>
           </argument>
