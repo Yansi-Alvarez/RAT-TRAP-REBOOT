@@ -303,7 +303,6 @@
       <sound>sound\snd_Beesquito_Buzz</sound>
       <sound>sound\snd_Enemy_Death</sound>
       <sound>sound\snd_Squeek</sound>
-      <sound>sound\snd_Echolocation</sound>
       <sound>sound\snd_Laugh</sound>
       <sound>sound\snd_Fairy</sound>
     </sounds>
@@ -316,6 +315,7 @@
       <sound>sound\snd_Pickup</sound>
       <sound>sound\snd_No_Ammo</sound>
       <sound>sound\snd_Metal_Clang</sound>
+      <sound>sound\snd_Laser_Charge</sound>
     </sounds>
     <sounds name="Misc.">
       <sound>sound\snd_Radio</sound>
@@ -709,6 +709,23 @@
         <sprite>sprites\spr_Sightline_Circle</sprite>
         <sprite>sprites\spr_Sightline_Square</sprite>
       </sprites>
+      <sprites name="Strail">
+        <sprite>sprites\spr_Strail_TEST</sprite>
+        <sprites name="Pieces">
+          <sprites name="Shell">
+            <sprite>sprites\spr_Strail_Walking_Down_Shell</sprite>
+            <sprite>sprites\spr_Strail_Walking_Up_Shell</sprite>
+            <sprite>sprites\spr_Strail_Walking_Left_Shell</sprite>
+            <sprite>sprites\spr_Strail_Walking_Right_Shell</sprite>
+          </sprites>
+          <sprites name="Slug">
+            <sprite>sprites\spr_Strail_Walking_Down</sprite>
+            <sprite>sprites\spr_Strail_Walking_Up</sprite>
+            <sprite>sprites\spr_Strail_Walking_Left</sprite>
+            <sprite>sprites\spr_Strail_Walking_Right</sprite>
+          </sprites>
+        </sprites>
+      </sprites>
       <sprites name="Scorpion">
         <sprite>sprites\TEST_DOWN_LEFT</sprite>
         <sprite>sprites\TEST_UP_LEFT</sprite>
@@ -768,6 +785,9 @@
           </sprites>
         </sprites>
       </sprites>
+      <sprites name="Dust Mite">
+        <sprite>sprites\spr_Dust_Mite</sprite>
+      </sprites>
     </sprites>
     <sprites name="GUI">
       <sprite>sprites\spr_Cursor_Alt</sprite>
@@ -821,8 +841,8 @@
             <sprite>sprites\spr_Wall_Lab_Addon_Pipe</sprite>
             <sprite>sprites\spr_Wall_Lab_Addon_Pipe_2</sprite>
           </sprites>
+          <sprite>sprites\spr_Wall_Lab_Test</sprite>
         </sprites>
-        <sprite>sprites\spr_Wall_Lab_Test</sprite>
         <sprites name="Server">
           <sprite>sprites\spr_Wall_Server_Test</sprite>
           <sprite>sprites\spr_Wall_Server_Down</sprite>
@@ -862,12 +882,6 @@
           <sprite>sprites\spr_Wall_Cliffs_Down</sprite>
           <sprite>sprites\spr_Wall_Cliffs_Full</sprite>
         </sprites>
-        <sprite>sprites\spr_Wall_Shadow</sprite>
-        <sprite>sprites\spr_Wall_Shadow_Lab_Down_Left</sprite>
-        <sprite>sprites\spr_Wall_Shadow_Lab_Up_Left</sprite>
-        <sprite>sprites\spr_Wall_Shadow_Lab_Down_Right</sprite>
-        <sprite>sprites\spr_Wall_Shadow_Lab_Up_Right</sprite>
-        <sprite>sprites\spr_Wall_Shadow_Lab_Alone</sprite>
         <sprites name="Desert">
           <sprite>sprites\spr_Wall_Desert_Down_TEST</sprite>
           <sprite>sprites\spr_Wall_Desert_Right</sprite>
@@ -884,6 +898,14 @@
           <sprite>sprites\spr_Wall_Desert_Left</sprite>
           <sprite>sprites\spr_Wall_Desert_Down</sprite>
           <sprite>sprites\spr_Wall_Desert_Full</sprite>
+        </sprites>
+        <sprites name="Shadows">
+          <sprite>sprites\spr_Wall_Shadow</sprite>
+          <sprite>sprites\spr_Wall_Shadow_Lab_Down_Left</sprite>
+          <sprite>sprites\spr_Wall_Shadow_Lab_Up_Left</sprite>
+          <sprite>sprites\spr_Wall_Shadow_Lab_Down_Right</sprite>
+          <sprite>sprites\spr_Wall_Shadow_Lab_Up_Right</sprite>
+          <sprite>sprites\spr_Wall_Shadow_Lab_Alone</sprite>
         </sprites>
       </sprites>
       <sprites name="Floors">
