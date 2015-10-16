@@ -5,5 +5,5 @@ ebp=0029F7F4 esp=0029F67C program=C:\Users\Dylan\AppData\Local\Atlassian\SourceT
 cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
 Stack trace:
 Frame     Function  Args
-0029F7F4  008B7968  (00000000, 00000000, 00000000, 00510000)
+0029F7F4  008B7968  (00000000, 00000000, 00000000, 00850000)
 End of stack trace
