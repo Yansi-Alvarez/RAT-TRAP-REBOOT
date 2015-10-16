@@ -1475,6 +1475,7 @@
     <room>rooms\rm_Title_Screen</room>
     <room>rooms\rm_Loading_Screen</room>
     <room>rooms\rm_Level_Generation</room>
+    <room>rooms\RAT</room>
   </rooms>
   <constants number="2">
     <constant name="GM_build_date">42094.8957887616</constant>
