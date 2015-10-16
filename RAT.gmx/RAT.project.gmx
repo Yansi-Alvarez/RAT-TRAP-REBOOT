@@ -846,9 +846,21 @@
             <sprite>sprites\spr_Wall_Server_Addon_Fan</sprite>
           </sprites>
         </sprites>
-        <sprites name="Woods">
-          <sprite>sprites\spr_Woods</sprite>
-          <sprite>sprites\spr_Woods_Alt</sprite>
+        <sprites name="Cliffs">
+          <sprite>sprites\spr_Walls_Cliffs_Right</sprite>
+          <sprite>sprites\spr_Wall_Cliffs_Corner_Right_Down</sprite>
+          <sprite>sprites\spr_Wall_Cliffs_Corner_Left_Down</sprite>
+          <sprite>sprites\spr_Wall_Cliffs_Corner_Right_Up</sprite>
+          <sprite>sprites\spr_Wall_Cliffs_Corner_Left_Up</sprite>
+          <sprite>sprites\spr_Walls_Cliffs_Intersection_Left</sprite>
+          <sprite>sprites\spr_Wall_Cliffs_Intersection_Right</sprite>
+          <sprite>sprites\spr_Wall_Cliffs_Left_Right</sprite>
+          <sprite>sprites\spr_Wall_Cliffs_Alone</sprite>
+          <sprite>sprites\spr_Wall_Cliffs_Turn_Left</sprite>
+          <sprite>sprites\spr_Wall_Cliffs_Left</sprite>
+          <sprite>sprites\spr_Wall_Cliffs_Turn_Right</sprite>
+          <sprite>sprites\spr_Wall_Cliffs_Down</sprite>
+          <sprite>sprites\spr_Wall_Cliffs_Full</sprite>
         </sprites>
         <sprite>sprites\spr_Wall_Shadow</sprite>
         <sprite>sprites\spr_Wall_Shadow_Lab_Down_Left</sprite>
@@ -935,6 +947,9 @@
           <sprite>sprites\spr_Prop_Cactus_Large</sprite>
         </sprites>
         <sprite>sprites\spr_Prop_Crate</sprite>
+        <sprites name="Woods">
+          <sprite>sprites\spr_Prop_Tree</sprite>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="Particles">
@@ -1234,6 +1249,10 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bkgd_Black</background>
+    <background>background\bkgd_Cage</background>
+    <background>background\bkgd_Upgrade</background>
+    <background>background\bkgd_HUD</background>
+    <background>background\bkgd_Title</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
