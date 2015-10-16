@@ -1285,6 +1285,7 @@
         <object>objects\obj_AR15</object>
         <object>objects\obj_P90</object>
         <object>objects\obj_Laser_Rifle</object>
+        <object>objects\obj_Lapua</object>
       </objects>
     </objects>
     <objects name="Projectiles">

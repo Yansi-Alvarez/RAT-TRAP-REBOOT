@@ -77,7 +77,13 @@ instance_create(mouse_x, mouse_y, obj_Cursor)
 
 //instance_create(obj_Rat_Head.x + 100,obj_Rat_Head.y,obj_Sword)
 
-instance_create(obj_Rat_Head.x + 50,obj_Rat_Head.y,obj_Potato_Handgun)
+instance_create(obj_Rat_Head.x + 50, obj_Rat_Head.y, obj_Potato_Handgun);
+instance_create(obj_Rat_Head.x + 75, obj_Rat_Head.y, obj_Beretta);
+instance_create(obj_Rat_Head.x, obj_Rat_Head.y + 50, obj_P90);
+instance_create(obj_Rat_Head.x, obj_Rat_Head.y + 75, obj_AR15);
+instance_create(obj_Rat_Head.x + 50, obj_Rat_Head.y + 75, obj_Magnum);
+instance_create(obj_Rat_Head.x + 50, obj_Rat_Head.y + 50, obj_Lapua);
+instance_create(obj_Rat_Head.x + 75, obj_Rat_Head.y + 50, obj_Pump_Shotgun);
 
 //instance_create(obj_Rat_Head.x + 150, obj_Rat_Head.y + 200, obj_Bullbug)
 /*
@@ -611,22 +617,40 @@ if keyboard_check_released(ord('S')) {
           <argument>
             <kind>1</kind>
             <string>draw_self();
+/*
+if (Player_Health == 5) or (Player_Health == 4) {
+
+    draw_sprite(spr_Full_Health, floor(img_index), (view_xview[0] + 80),(view_yview[0] + 80));
+    
+}
+
+else if (Player_Health == 3) or (Player_Health == 2) {
+
+    draw_sprite(spr_Medium_Health, floor(img_index), (view_xview[0] + 80),(view_yview[0] + 80));
+    
+}
+
+else if (Player_Health &lt;= 1) {
+
+    draw_sprite(spr_Low_Health, floor(img_index), (view_xview[0] + 80),(view_yview[0] + 80));
+    
+}*/
 
 if (Player_Health == 5) or (Player_Health == 4) {
 
-    draw_sprite(spr_Full_Health, floor(img_index), (view_xview[0] + 100),(view_yview[0] + 100));
+    draw_sprite_ext(spr_Full_Health, floor(img_index), (view_xview[0] + 70),(view_yview[0] + 60), 0.75, 0.75, 0, noone, 1);
+    
+}
+/*
+else if (Player_Health == 3) or (Player_Health == 2) {
+
+    draw_sprite(spr_Medium_Health, floor(img_index), (view_xview[0] + 80),(view_yview[0] + 80));
     
 }
 
-if (Player_Health == 3) or (Player_Health == 2) {
+else if (Player_Health &lt;= 1) {
 
-    draw_sprite(spr_Medium_Health, floor(img_index), (view_xview[0] + 100),(view_yview[0] + 100));
-    
-}
-
-if (Player_Health &lt;= 1) {
-
-    draw_sprite(spr_Low_Health, floor(img_index), (view_xview[0] + 100),(view_yview[0] + 100));
+    draw_sprite(spr_Low_Health, floor(img_index), (view_xview[0] + 80),(view_yview[0] + 80));
     
 }
 

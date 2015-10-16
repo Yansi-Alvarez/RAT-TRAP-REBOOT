@@ -25,13 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index_Right_Gun_In_Use_Equipped = spr_Rifle_Laser_Right;
+            <string>event_inherited();
+
+obj_Gun_In_Use = obj_Laser_Rifle;
+
+sprite_index_Right_Gun_In_Use_Equipped = spr_Rifle_Laser_Right;
 
 sprite_index_Left_Gun_In_Use_Equipped = spr_Rifle_Laser_Left;
 
 sprite_index_Left_Gun_In_Use_Pick_Up = spr_Rifle_Laser_Pickup_Left;
 
 sprite_index_Right_Gun_In_Use_Pick_Up = spr_Rifle_Laser_Pickup_Right;
+
+sprite_index_Gun_Hud = spr_Rifle_Laser_HUD;
 
 potato_gun_bullet_timer = true;
 
@@ -63,7 +69,15 @@ gun_fully_charged_animation_left = noone;
 
 gun_fully_charged_animation_right = noone;
 
-sprite_index = spr_Rifle_Laser_Pickup;
+sprite_index = choose(spr_Rifle_Laser_Pickup_Right, spr_Rifle_Laser_Pickup_Left);
+
+text_gun = "Press E to equip [Laser Rifle]";
+popup_width_gun = 125;//string_width(text_gun);
+popup_padding_gun = 3;
+draw_below_gun = false;
+font_gun = Game_Font;
+font_color_gun = c_lime; 
+bak_color_gun = c_black;
 </string>
           </argument>
         </arguments>

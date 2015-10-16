@@ -69,15 +69,15 @@ ammo = 5;
 
 ammo_capacity = 5;
 
-ammo_reserve= 150;
+ammo_reserve = 150;
 
-text = "Press E to equip [Beretta]";
-popup_width = string_width(text);
-popup_padding = 3;
-draw_below = false;
-font = Game_Font;
-font_color = c_lime; 
-bak_color = c_black;
+text_gun = "Press E to equip [Beretta]";
+popup_width_gun = 125//string_width(text);
+popup_padding_gun = 3;
+draw_below_gun = false;
+font_gun = Game_Font;
+font_color_gun = c_lime; 
+bak_color_gun = c_black;
 </string>
           </argument>
         </arguments>
