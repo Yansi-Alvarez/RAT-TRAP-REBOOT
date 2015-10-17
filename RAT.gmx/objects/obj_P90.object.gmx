@@ -39,6 +39,8 @@ sprite_index_Right_Gun_In_Use_Pick_Up = spr_Rifle_P90_Pickup_Right;
 
 sprite_index_Gun_Hud = spr_Rifle_P90_HUD;
 
+casings = obj_Casing_Handgun;
+
 potato_gun_bullet_timer = true;
 
 bullet_speed = 60;

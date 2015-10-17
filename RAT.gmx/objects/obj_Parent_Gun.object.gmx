@@ -284,7 +284,7 @@ if (screen_jiggle == true) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.weapon_attach_left_arm == true) and (global.weapon_attach_right_arm == false) and (weapon_picked_up == true) {     
+            <string>if ((global.weapon_attach_left_arm == true) and (global.weapon_attach_right_arm == false) and (weapon_picked_up == true)) {     
 
     if (obj_Rat_Head.sprite_index = spr_Head_Standard_Idle_Down_Left) {
     
@@ -380,7 +380,7 @@ if (screen_jiggle == true) {
 
 //Gun Attachment Code for the right arm
 
-if (global.weapon_attach_right_arm == true) and (global.weapon_attach_left_arm == false) and (weapon_picked_up = true) {
+if ((global.weapon_attach_right_arm == true) and (global.weapon_attach_left_arm == false) and (weapon_picked_up = true)) {
     
     if (obj_Rat_Head.sprite_index = spr_Head_Standard_Idle_Down_Left) {
     
@@ -682,7 +682,9 @@ if (global.weapon_attach_right_arm == true) and (global.weapon_attach_left_arm =
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if  ((global.direction_player &gt;= 0) and (global.direction_player &lt;= 89)) and (obj_Rat_Head.walk_up_right == false) and (obj_Rat_Head.collision_with_enemy == false) {
+            <string>randomize();
+
+if  ((global.direction_player &gt;= 0) and (global.direction_player &lt;= 89)) and (obj_Rat_Head.walk_up_right == false) and (obj_Rat_Head.collision_with_enemy == false) {
 
     if (global.weapon_attach_left_arm == true) and (gun_collision == true) and (global.weapon_attach_right_arm == false) {
         
@@ -798,7 +800,8 @@ if (gun_type == 2) {
             audio_play_sound(shooting_sound, 1, 0);
             other.object_bullet.direction = point_direction(obj_Rat_Head.x, obj_Rat_Head.y, mouse_x, mouse_y);
             instance_create(x + ldx, y + ldy, gun_flash);
-            instance_create(x, y, casings);
+            other.gun_casings = instance_create(x, y, casings);
+            other.gun_casings.image_angle = random(360);
             other.object_bullet.speed = bullet_speed;
             alarm[1] = alarm_timer;
             alarm[2] = alarm_timer;
@@ -832,7 +835,8 @@ if (gun_type == 3) {
                 other.object_bullet.speed = bullet_speed;
             }
             
-            instance_create(x, y, casings);
+            other.gun_casings = instance_create(x, y, casings);
+            other.gun_casings.image_angle = random(360);
             alarm[0] = cool_down;
             ammo -= 1;
             
@@ -850,19 +854,19 @@ if (gun_type == 3) {
 }
 
 //Laser rifle
-/*
+
 if (gun_type == 4) {
 
     if (gun_collision == true) and (ammo &gt;= 1) {
     
-        if keyboard_check(mb_left) and (other.potato_gun_bullet_timer == true) and ((global.weapon_attach_right_arm == true) or 
+        if mouse_check_button_pressed(mb_left) and (other.potato_gun_bullet_timer == true) and ((global.weapon_attach_right_arm == true) or 
         (global.weapon_attach_left_arm == true)) {
         
-            sprite_index = gun_charging_animation_left;
+            //sprite_index = gun_charging_animation_left;
             //audio_play_sound(charging_sound, 1, 1);
-            image_speed = charging_speed;
+            //image_speed = charging_speed;
             
-            if (mouse_check_button_released(mb_left)) and ((other.sprite_index == gun_fully_charged_animation_left) or (other.sprite_index == gun_fully_charged_animation_left)){
+            //if (mouse_check_button_released(mb_left)) and ((other.sprite_index == gun_fully_charged_animation_left) or (other.sprite_index == gun_fully_charged_animation_left)){
                 
                 other.object_bullet = instance_create(x, y, bullet);
                 audio_play_sound(shooting_sound, 1, 0);
@@ -872,8 +876,8 @@ if (gun_type == 4) {
                 other.potato_gun_bullet_timer = false;
                 alarm[0] = cool_down;
                 ammo -= 1;
-            }
-            
+            //}
+            /*
             if (mouse_check_button_released(mb_left) and (sprite_index == gun_charging_animation_left)) {
                 
                 other.potato_gun_bullet_timer = false;
@@ -884,10 +888,10 @@ if (gun_type == 4) {
                 
                 other.potato_gun_bullet_timer = false;
                 sprite_index = sprite_index_Right_Gun_In_Use_Equipped;
-            }
+            }*/
         } 
     }
-}*/
+}
 
 //P90
 if (gun_type = 5) and (ammo &gt;= 1) {
@@ -900,6 +904,8 @@ if (gun_type = 5) and (ammo &gt;= 1) {
             object_bullet = instance_create(x, y, bullet);
             audio_play_sound(shooting_sound, 1, 0);
             object_bullet.direction = point_direction(obj_Rat_Head.x, obj_Rat_Head.y, mouse_x, mouse_y);
+            other.gun_casings = instance_create(x, y, casings);
+            other.gun_casings.image_angle = random(360);
             instance_create(x + ldx, y + ldy, gun_flash);
             object_bullet.speed = bullet_speed;
             ammo -= 1;
@@ -1283,12 +1289,23 @@ if ((global.weapon_attach_left_arm == true) or (global.weapon_attach_right_arm =
     draw_set_font(Game_Font);
     //draw_set_halign(fa_center);
     //draw_set_valign(fa_middle);
-    draw_text_colour((view_xview[0] + 500), (view_yview[0] + 10), ( "[ " + string(obj_Rat_Body.weapon_equipped.ammo) + "\" ), c_lime, c_lime, c_lime, c_lime, 1);
-    draw_text_colour((view_xview[0] + 530), (view_yview[0] + 10), string(obj_Rat_Body.weapon_equipped.ammo_reserve) + " ]", c_lime, c_lime, c_lime, c_lime, 1);
+    
+    if (obj_Rat_Body.weapon_equipped.ammo &gt;= 10) {
+        draw_text_colour((view_xview[0] + 500), (view_yview[0] + 10), ( string(obj_Rat_Body.weapon_equipped.ammo) + "\" ), c_lime, c_lime, c_lime, c_lime, 1);
+        draw_text_colour((view_xview[0] + 525), (view_yview[0] + 10), string(obj_Rat_Body.weapon_equipped.ammo_reserve), c_lime, c_lime, c_lime, c_lime, 1);
+        }
+        
+    if (obj_Rat_Body.weapon_equipped.ammo &lt;= 9) {
+        draw_text_colour((view_xview[0] + 505), (view_yview[0] + 10), ( string(obj_Rat_Body.weapon_equipped.ammo) + "\" ), c_lime, c_lime, c_lime, c_lime, 1);
+        draw_text_colour((view_xview[0] + 525), (view_yview[0] + 10), string(obj_Rat_Body.weapon_equipped.ammo_reserve), c_lime, c_lime, c_lime, c_lime, 1);
+        }
     
     if ((sprite_index == sprite_index_Right_Gun_In_Use_Equipped) or (sprite_index == sprite_index_Left_Gun_In_Use_Equipped)) {
         
         draw_sprite(sprite_index_Gun_Hud, 0, (view_xview[0] + 515),(view_yview[0] + 35));
+        draw_sprite(spr_Ammo_Bracket_Left, 0, (view_xview[0] + 515) - 35, (view_yview[0] + 27));
+        draw_sprite(spr_Ammo_Bracket_Right, 0, (view_xview[0] + 515) + 35,(view_yview[0] + 27));
+
     }
 }
 

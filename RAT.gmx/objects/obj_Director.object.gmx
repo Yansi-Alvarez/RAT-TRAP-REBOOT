@@ -105,9 +105,23 @@ global.wall_alone[2] = obj_Wall_Desert_Alone;
 global.wall_turn_left[2] = obj_Wall_Desert_Turn_Left;
 global.wall_turn_right[2] = obj_Wall_Desert_Turn_Right;
 
+global.wall_right[3] = obj_Wall_Cliff_Right;
+global.wall_down[3] = obj_Wall_Cliff_Down;
+global.wall_left[3] = obj_Wall_Cliff_Left;
+global.wall_left_right[3] = obj_Wall_Cliff_Left_Right;
+global.wall_corner_right_up[3] = obj_Wall_Cliff_Corner_Right_Up;
+global.wall_corner_left_up[3] = obj_Wall_Cliff_Corner_Left_Up;
+global.wall_intersection_right[3] = obj_Wall_Cliff_Intersection_Right;
+global.wall_intersection_left[3] = obj_Wall_Cliff_Intersection_Left;
+global.wall_full[3] = obj_Wall_Cliff_Full;
+global.wall_alone[3] = obj_Wall_Cliff_Alone;
+global.wall_turn_left[3] = obj_Wall_Cliff_Turn_Left;
+global.wall_turn_right[3] = obj_Wall_Cliff_Turn_Right;
+
 global.level_floor[0] = obj_Concrete_Floor;
 global.level_floor[1] = obj_Steel;
 global.level_floor[2] = obj_Sand;
+global.level_floor[3] = choose(obj_Grass, obj_Grass_Alt, obj_Grass_Alt_2);
 
 ////////////////////////////////////////////////////////////////////////////////
 

@@ -54,8 +54,8 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
         and (ds_grid_get(obj_Director.grid_map, (i - 1), j) == 1) 
         and ((ds_grid_get(obj_Director.grid_map, i, (j - 1)) == 1) or (ds_grid_get(obj_Director.grid_map, i, (j - 1)) == 0))) {
         
-            instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), global.wall_alone[global.wall_input]);
-            //instance_create((i * global.level_maker_speed), (j * global.level_maker_speed) + (global.level_maker_speed / 2), global.wall_alone[global.wall_input]);
+            //instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), global.wall_alone[global.wall_input]); //idk, it was commented out
+            instance_create((i * global.level_maker_speed), (j * global.level_maker_speed) + (global.level_maker_speed / 2), global.wall_alone[global.wall_input]);
             instance_create((i * global.level_maker_speed), ((j + 1) * global.level_maker_speed), obj_Wall_Shadow);
             ds_grid_set(obj_Director.grid_map, i, j, 2);
         }

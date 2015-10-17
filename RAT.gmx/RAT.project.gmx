@@ -1429,9 +1429,28 @@
           <object>objects\obj_Wall_Desert_Intersection_Left</object>
           <object>objects\obj_Wall_Desert_Intersection_Right</object>
         </objects>
+        <objects name="Cliffs">
+          <object>objects\obj_Wall_Cliff_Left</object>
+          <object>objects\obj_Wall_Cliff_Right</object>
+          <object>objects\obj_Wall_Cliff_Down</object>
+          <object>objects\obj_Wall_Cliff_Corner_Right_Up</object>
+          <object>objects\obj_Wall_Cliff_Corner_Left_Up</object>
+          <object>objects\obj_Wall_Cliff_Full</object>
+          <object>objects\obj_Wall_Cliff_Turn_Right</object>
+          <object>objects\obj_Wall_Cliff_Turn_Left</object>
+          <object>objects\obj_Wall_Cliff_Alone</object>
+          <object>objects\obj_Wall_Cliff_Left_Right</object>
+          <object>objects\obj_Wall_Cliff_Intersection_Left</object>
+          <object>objects\obj_Wall_Cliff_Intersection_Right</object>
+        </objects>
       </objects>
       <objects name="Floors">
         <object>objects\obj_Parent_Floor</object>
+        <objects name="Grass">
+          <object>objects\obj_Grass</object>
+          <object>objects\obj_Grass_Alt</object>
+          <object>objects\obj_Grass_Alt_2</object>
+        </objects>
         <objects name="Concrete">
           <object>objects\obj_Concrete_Floor</object>
           <object>objects\obj_Concrete_Floor_Alt</object>
