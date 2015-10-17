@@ -294,7 +294,6 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
         and (ds_grid_get(obj_Director.grid_map, (i - 1), j) == 0)) and (prop_spawn_chance &lt;= 100){
         
             instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), obj_Shelves);
-            obj_Shelves.sprite_index = spr_Prop_Shelves_Right;
         }
         
         if ((ds_grid_get(obj_Director.grid_map, i, j) == 1) 
@@ -303,7 +302,6 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
         and (ds_grid_get(obj_Director.grid_map, (i + 1), j) == 0)) and (prop_spawn_chance &lt;= 100){
         
             instance_create((i * global.level_maker_speed), (j * global.level_maker_speed), obj_Shelves);
-            obj_Shelves.sprite_index = spr_Prop_Shelves_Left;
         }
     }
 }

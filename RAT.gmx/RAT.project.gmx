@@ -1064,24 +1064,30 @@
         <sprites name="One-Handed">
           <sprites name="Basic Sword">
             <sprite>sprites\spr_Sword_Basic_Right</sprite>
-            <sprite>sprites\spr_Sword_Basic_Pickup</sprite>
+            <sprite>sprites\spr_Sword_Basic_Pickup_Right</sprite>
+            <sprite>sprites\spr_Sword_Basic_Pickup_Left</sprite>
             <sprite>sprites\spr_Sword_Basic_HUD</sprite>
             <sprite>sprites\spr_Sword_Basic_Left</sprite>
           </sprites>
           <sprites name="Stick">
-            <sprite>sprites\spr_Sword_Stick</sprite>
+            <sprite>sprites\spr_Sword_Stick_Right</sprite>
+            <sprite>sprites\spr_Sword_Stick_Left</sprite>
             <sprite>sprites\spr_Sword_Stick_HUD</sprite>
-            <sprite>sprites\spr_Sword_Stick_Pickup</sprite>
+            <sprite>sprites\spr_Sword_Stick_Pickup_Right</sprite>
+            <sprite>sprites\spr_Sword_Stick_Pickup_Left</sprite>
           </sprites>
           <sprites name="Boomerang">
-            <sprite>sprites\spr_Boomerang</sprite>
+            <sprite>sprites\spr_Boomerang_Right</sprite>
+            <sprite>sprites\spr_Boomerang_Left</sprite>
             <sprite>sprites\spr_Boomerang_HUD</sprite>
-            <sprite>sprites\spr_Boomerang_Pickup</sprite>
+            <sprite>sprites\spr_Boomerang_Pickup_Right</sprite>
+            <sprite>sprites\spr_Boomerang_Pickup_Left</sprite>
           </sprites>
           <sprites name="Mjolnir">
             <sprite>sprites\spr_Mjolnir_Right</sprite>
             <sprite>sprites\spr_Mjolnir_HUD</sprite>
-            <sprite>sprites\spr_Mjolnir_Pickup</sprite>
+            <sprite>sprites\spr_Mjolnir_Pickup_Right</sprite>
+            <sprite>sprites\spr_Mjolnir_Pickup_Left</sprite>
             <sprite>sprites\spr_Mjolnir_Left</sprite>
           </sprites>
         </sprites>
@@ -1362,7 +1368,9 @@
       <objects name="One Handed Melee">
         <object>objects\obj_Parent_One_Handed_Melee</object>
         <object>objects\obj_Sword</object>
+        <object>objects\obj_Boomerang</object>
         <object>objects\obj_Stick</object>
+        <object>objects\obj_Mjolnir</object>
       </objects>
       <objects name="Two Handed Melee">
         <object>objects\obj_Parent_Two_Handed_Melee</object>
@@ -1371,11 +1379,17 @@
     </objects>
     <objects name="Level Setup">
       <objects name="Props">
-        <object>objects\obj_Shelves</object>
+        <object>objects\obj_Shelves_Right</object>
+        <object>objects\obj_Shelves_Left</object>
         <object>objects\obj_Bread</object>
+        <object>objects\obj_Drain</object>
+        <object>objects\obj_Smudge</object>
         <object>objects\obj_Server</object>
         <object>objects\obj_Pipe</object>
         <object>objects\prop_Crate</object>
+        <object>objects\obj_Tree</object>
+        <object>objects\obj_Small_Cactus</object>
+        <object>objects\obj_Large_Cactus</object>
       </objects>
       <objects name="Walls">
         <object>objects\obj_Parent_Wall</object>
@@ -1453,8 +1467,6 @@
         </objects>
         <objects name="Concrete">
           <object>objects\obj_Concrete_Floor</object>
-          <object>objects\obj_Concrete_Floor_Alt</object>
-          <object>objects\obj_Concrete_Floor_Alt_2</object>
         </objects>
         <objects name="Sand">
           <object>objects\obj_Sand</object>

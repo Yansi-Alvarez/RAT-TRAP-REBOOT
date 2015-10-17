@@ -123,6 +123,8 @@ global.level_floor[1] = obj_Steel;
 global.level_floor[2] = obj_Sand;
 global.level_floor[3] = choose(obj_Grass, obj_Grass_Alt, obj_Grass_Alt_2);
 
+//Make global array for the props
+
 ////////////////////////////////////////////////////////////////////////////////
 
 grid_width = (room_width/global.level_maker_speed) + 1; //(2560/64) + 1 = 41
