@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_Parent_Gun</parentName>
+  <parentName>obj_Parent_Weapon</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -29,25 +29,25 @@
 
 image_speed = 0.3;
 
-obj_Gun_In_Use = obj_Laser_Rifle;
+obj_Weapon_In_Use = obj_Laser_Rifle;
 
-sprite_index_Right_Gun_In_Use_Equipped = spr_Rifle_Laser_Right;
+sprite_index_Right_Weapon_In_Use_Equipped = spr_Rifle_Laser_Right;
 
-sprite_index_Left_Gun_In_Use_Equipped = spr_Rifle_Laser_Left;
+sprite_index_Left_Weapon_In_Use_Equipped = spr_Rifle_Laser_Left;
 
-sprite_index_Left_Gun_In_Use_Pick_Up = spr_Rifle_Laser_Pickup_Left;
+sprite_index_Left_Weapon_In_Use_Pick_Up = spr_Rifle_Laser_Pickup_Left;
 
-sprite_index_Right_Gun_In_Use_Pick_Up = spr_Rifle_Laser_Pickup_Right;
+sprite_index_Right_Weapon_In_Use_Pick_Up = spr_Rifle_Laser_Pickup_Right;
 
-sprite_index_Gun_Hud = spr_Rifle_Laser_HUD;
+sprite_index_Weapon_Hud = spr_Rifle_Laser_HUD;
 
-potato_gun_bullet_timer = true;
+bullet_timer = true;
 
 correction = 160;
 
 correction_2 = 200;
 
-gun_type = 4;
+weapon_type = 4;
 
 bullet = obj_Laser_Bullet;
 
@@ -67,23 +67,23 @@ ammo_reserve = 50;
 
 shooting_sound = snd_Laser_Cannon;
 
-gun_charging_animation_left = spr_Rifle_Laser_Charging_Left;
+weapon_charging_animation_left = spr_Rifle_Laser_Charging_Left;
 
-gun_charging_animation_right = spr_Rifle_Laser_Charging_Right;
+weapon_charging_animation_right = spr_Rifle_Laser_Charging_Right;
 
-gun_fully_charged_animation_left = spr_Rifle_Laser_Fully_Charged_Left;
+weapon_fully_charged_animation_left = spr_Rifle_Laser_Fully_Charged_Left;
 
-gun_fully_charged_animation_right = spr_Rifle_Laser_Fully_Charged_Right;
+weapon_fully_charged_animation_right = spr_Rifle_Laser_Fully_Charged_Right;
 
 sprite_index = choose(spr_Rifle_Laser_Pickup_Right, spr_Rifle_Laser_Pickup_Left);
 
-text_gun = "Press E to equip [Laser Rifle]";
-popup_width_gun = 125; //string_width(text_gun);
-popup_padding_gun = 3;
-draw_below_gun = false;
-font_gun = Game_Font;
-font_color_gun = c_lime; 
-bak_color_gun = c_black;
+text_weapon = "Press E to equip [Laser Rifle]";
+popup_width_weapon = 125; //string_width(text_gun);
+popup_padding_weapon = 3;
+draw_below_weapon = false;
+font_weapon = Game_Font;
+font_color_weapon = c_lime; 
+bak_color_weapon = c_black;
 </string>
           </argument>
         </arguments>

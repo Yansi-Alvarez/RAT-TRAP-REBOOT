@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_Parent_One_Handed_Melee</parentName>
+  <parentName>obj_Parent_Weapon</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,33 +27,37 @@
             <kind>1</kind>
             <string>event_inherited();
 
-obj_One_Handed_Melee_Weapon_In_Use = obj_Stick;
+obj_Weapon_In_Use = obj_Stick;
 
-sprite_index_Right_One_Handed_Melee_Weapon_In_Use_Equipped = spr_Sword_Stick_Right;
+sprite_index_Right_Weapon_In_Use_Equipped = spr_Sword_Stick_Right;
 
-sprite_index_Left_One_Handed_Melee_Weapon_In_Use_Equipped = spr_Sword_Stick_Left;
+sprite_index_Left_Weapon_In_Use_Equipped = spr_Sword_Stick_Left;
 
-sprite_index_Left_One_Handed_Melee_Weapon_In_Use_Pick_Up = spr_Sword_Stick_Pickup_Left;
+sprite_index_Left_Weapon_In_Use_Pick_Up = spr_Sword_Stick_Pickup_Left;
 
-sprite_index_Right_One_Handed_Melee_Weapon_In_Use_Pick_Up = spr_Sword_Stick_Pickup_Right;
+sprite_index_Right_Weapon_In_Use_Pick_Up = spr_Sword_Stick_Pickup_Right;
 
-sprite_index_One_Handed_Melee_Weapon_Hud = spr_Sword_Stick_HUD;
+sprite_index_Weapon_Hud = spr_Sword_Stick_HUD;
+
+correction = 160;
+
+correction_2 = 200;
 
 sprite_index = choose(spr_Sword_Stick_Pickup_Right, spr_Sword_Stick_Pickup_Left);
 
-text_One_Handed_Melee_Weapon = "Press E to equip [Wooden Stick]";
-popup_width_One_Handed_Melee_Weapon = 125;
-popup_padding_One_Handed_Melee_Weapon = 3;
-draw_below_One_Handed_Melee_Weapon = false;
-font_One_Handed_Melee_Weapon = Game_Font;
-font_color_One_Handed_Melee_Weapon = c_lime; 
-bak_color_One_Handed_Melee_Weapon = c_black;
+text_weapon = "Press E to equip [Wooden Stick]";
+popup_width_weapon = 125;
+popup_padding_weapon = 3;
+draw_below_weapon = false;
+font_weapon = Game_Font;
+font_color_weapon = c_lime; 
+bak_color_weapon = c_black;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event eventtype="2" enumb="4">
       <action>
         <libid>1</libid>
         <id>603</id>

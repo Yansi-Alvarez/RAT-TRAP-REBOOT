@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_Parent_Gun</parentName>
+  <parentName>obj_Parent_Weapon</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,21 +27,21 @@
             <kind>1</kind>
             <string>event_inherited();
 
-obj_Gun_In_Use = obj_P90;
+obj_Weapon_In_Use = obj_P90;
 
-sprite_index_Right_Gun_In_Use_Equipped = spr_Rifle_P90_Right;
+sprite_index_Right_Weapon_In_Use_Equipped = spr_Rifle_P90_Right;
 
-sprite_index_Left_Gun_In_Use_Equipped = spr_Rifle_P90_Left;
+sprite_index_Left_Weapon_In_Use_Equipped = spr_Rifle_P90_Left;
 
-sprite_index_Left_Gun_In_Use_Pick_Up = spr_Rifle_P90_Pickup_Left;
+sprite_index_Left_Weapon_In_Use_Pick_Up = spr_Rifle_P90_Pickup_Left;
 
-sprite_index_Right_Gun_In_Use_Pick_Up = spr_Rifle_P90_Pickup_Right;
+sprite_index_Right_Weapon_In_Use_Pick_Up = spr_Rifle_P90_Pickup_Right;
 
-sprite_index_Gun_Hud = spr_Rifle_P90_HUD;
+sprite_index_Weapon_Hud = spr_Rifle_P90_HUD;
 
 casings = obj_Casing_Handgun;
 
-potato_gun_bullet_timer = true;
+bullet_timer = true;
 
 bullet_speed = 60;
 
@@ -55,7 +55,7 @@ ammo_capacity = 20;
 
 ammo_reserve = 600;
 
-gun_type = 5;
+weapon_type = 5;
 
 bullet = obj_Handgun_Bullet;
 
@@ -77,13 +77,13 @@ screen_jiggle = true;
 
 sprite_index = choose(spr_Rifle_P90_Pickup_Left, spr_Rifle_P90_Pickup_Right);
 
-text_gun = "Press E to equip [P90]";
-popup_width_gun = 125//string_width(text);
-popup_padding_gun = 3;
-draw_below_gun = false;
-font_gun = Game_Font;
-font_color_gun = c_lime; 
-bak_color_gun = c_black;
+text_weapon = "Press E to equip [P90]";
+popup_width_weapon = 125//string_width(text);
+popup_padding_weapon = 3;
+draw_below_weapon = false;
+font_weapon = Game_Font;
+font_color_weapon = c_lime; 
+bak_color_weapon = c_black;
 </string>
           </argument>
         </arguments>

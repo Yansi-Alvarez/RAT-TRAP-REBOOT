@@ -1315,26 +1315,40 @@
       <object>objects\obj_Clock</object>
     </objects>
     <objects name="Weapons">
-      <object>objects\obj_Parent_Gun</object>
-      <objects name="Shotguns">
-        <object>objects\obj_Pump_Shotgun</object>
-        <objects name="Casings">
-          <object>objects\obj_Casing_Shotgun</object>
+      <object>objects\obj_Parent_Weapon</object>
+      <objects name="Guns">
+        <objects name="Handguns">
+          <object>objects\obj_Potato_Handgun</object>
+          <object>objects\obj_Magnum</object>
+          <object>objects\obj_Beretta</object>
+          <objects name="Casings">
+            <object>objects\obj_Casing_Handgun</object>
+          </objects>
+        </objects>
+        <objects name="Rifles">
+          <object>objects\obj_AR15</object>
+          <object>objects\obj_P90</object>
+          <object>objects\obj_Laser_Rifle</object>
+          <object>objects\obj_Lapua</object>
+        </objects>
+        <objects name="Shotguns">
+          <object>objects\obj_Pump_Shotgun</object>
+          <objects name="Casings">
+            <object>objects\obj_Casing_Shotgun</object>
+          </objects>
         </objects>
       </objects>
-      <objects name="Handguns">
-        <object>objects\obj_Potato_Handgun</object>
-        <object>objects\obj_Magnum</object>
-        <object>objects\obj_Beretta</object>
-        <objects name="Casings">
-          <object>objects\obj_Casing_Handgun</object>
+      <objects name="Melee">
+        <objects name="One Handed Melee">
+          <object>objects\obj_Sword</object>
+          <object>objects\obj_Boomerang</object>
+          <object>objects\obj_Stick</object>
+          <object>objects\obj_Mjolnir</object>
         </objects>
-      </objects>
-      <objects name="Rifles">
-        <object>objects\obj_AR15</object>
-        <object>objects\obj_P90</object>
-        <object>objects\obj_Laser_Rifle</object>
-        <object>objects\obj_Lapua</object>
+        <objects name="Two Handed Melee">
+          <object>objects\obj_Parent_Two_Handed_Melee</object>
+          <object>objects\obj_Morning_Star</object>
+        </objects>
       </objects>
     </objects>
     <objects name="Projectiles">
@@ -1363,19 +1377,6 @@
       <object>objects\obj_Bullet_Death</object>
       <object>objects\obj_Sightline_Circle</object>
       <object>objects\obj_Sightline_Square</object>
-    </objects>
-    <objects name="Melee">
-      <objects name="One Handed Melee">
-        <object>objects\obj_Parent_One_Handed_Melee</object>
-        <object>objects\obj_Sword</object>
-        <object>objects\obj_Boomerang</object>
-        <object>objects\obj_Stick</object>
-        <object>objects\obj_Mjolnir</object>
-      </objects>
-      <objects name="Two Handed Melee">
-        <object>objects\obj_Parent_Two_Handed_Melee</object>
-        <object>objects\obj_Morning_Star</object>
-      </objects>
     </objects>
     <objects name="Level Setup">
       <objects name="Props">
