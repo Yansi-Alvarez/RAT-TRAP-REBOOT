@@ -666,6 +666,9 @@
           </sprites>
         </sprites>
       </sprites>
+      <sprites name="Dust Mite">
+        <sprite>sprites\spr_Dust_Mite</sprite>
+      </sprites>
       <sprites name="Dung Beetle">
         <sprites name="Pieces">
           <sprite>sprites\spr_Dung_Up</sprite>
@@ -784,9 +787,6 @@
             </sprites>
           </sprites>
         </sprites>
-      </sprites>
-      <sprites name="Dust Mite">
-        <sprite>sprites\spr_Dust_Mite</sprite>
       </sprites>
     </sprites>
     <sprites name="GUI">
@@ -1051,6 +1051,7 @@
           <sprite>sprites\spr_Particle_Slash_Small_Right</sprite>
           <sprite>sprites\spr_Particle_Slash_Right</sprite>
           <sprite>sprites\spr_Particle_Slash_Left</sprite>
+          <sprite>sprites\NEW_SLASH</sprite>
         </sprites>
         <sprite>sprites\spr_Particle_Hit</sprite>
         <sprite>sprites\spr_Particle_Explosion_Test</sprite>
