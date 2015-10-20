@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_Parent_Gun</parentName>
+  <parentName>obj_Parent_Weapon</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,25 +27,25 @@
             <kind>1</kind>
             <string>event_inherited();
 
-obj_Gun_In_Use = obj_Pump_Shotgun;
+obj_Weapon_In_Use = obj_Pump_Shotgun;
 
-sprite_index_Right_Gun_In_Use_Equipped = spr_Shotgun_Pump_Right;
+sprite_index_Right_Weapon_In_Use_Equipped = spr_Shotgun_Pump_Right;
 
-sprite_index_Left_Gun_In_Use_Equipped = spr_Shotgun_Pump_Left;
+sprite_index_Left_Weapon_In_Use_Equipped = spr_Shotgun_Pump_Left;
 
-sprite_index_Left_Gun_In_Use_Pick_Up = spr_Shotgun_Pump_Pickup_Left;
+sprite_index_Left_Weapon_In_Use_Pick_Up = spr_Shotgun_Pump_Pickup_Left;
 
-sprite_index_Right_Gun_In_Use_Pick_Up = spr_Shotgun_Pump_Pickup_Right;
+sprite_index_Right_Weapon_In_Use_Pick_Up = spr_Shotgun_Pump_Pickup_Right;
 
-sprite_index_Gun_Hud = spr_Shotgun_Pump_HUD;
+sprite_index_Weapon_Hud = spr_Shotgun_Pump_HUD;
 
-potato_gun_bullet_timer = true;
+bullet_timer = true;
 
 bullet_speed = 40;
 
 bullet = obj_Pump_Shotgun_Bullet;
 
-gun_type = 3;
+weapon_type = 3;
 
 shooting_sound = snd_Shotgun;
 
@@ -55,7 +55,7 @@ correction = 160;
 
 correction_2 = 200;
 
-gun_flash = obj_Muzzle_Flash;
+weapon_flash = obj_Muzzle_Flash;
 
 casings = obj_Casing_Shotgun;
 
@@ -75,13 +75,13 @@ ammo_capacity = 5;
 
 ammo_reserve = 200;
 
-text_gun = "Press E to equip [Pump Action Shotgun]";
-popup_width_gun = 125;//string_width(text_gun);
-popup_padding_gun = 3;
-draw_below_gun = false;
-font_gun = Game_Font;
-font_color_gun = c_lime; 
-bak_color_gun = c_black;
+text_weapon = "Press E to equip [Pump Action Shotgun]";
+popup_width_weapon = 125;//string_width(text_gun);
+popup_padding_weapon = 3;
+draw_below_weapon = false;
+font_weapon = Game_Font;
+font_color_weapon = c_lime; 
+bak_color_weapon = c_black;
 </string>
           </argument>
         </arguments>

@@ -1065,24 +1065,30 @@
         <sprites name="One-Handed">
           <sprites name="Basic Sword">
             <sprite>sprites\spr_Sword_Basic_Right</sprite>
-            <sprite>sprites\spr_Sword_Basic_Pickup</sprite>
+            <sprite>sprites\spr_Sword_Basic_Pickup_Right</sprite>
+            <sprite>sprites\spr_Sword_Basic_Pickup_Left</sprite>
             <sprite>sprites\spr_Sword_Basic_HUD</sprite>
             <sprite>sprites\spr_Sword_Basic_Left</sprite>
           </sprites>
           <sprites name="Stick">
-            <sprite>sprites\spr_Sword_Stick</sprite>
+            <sprite>sprites\spr_Sword_Stick_Right</sprite>
+            <sprite>sprites\spr_Sword_Stick_Left</sprite>
             <sprite>sprites\spr_Sword_Stick_HUD</sprite>
-            <sprite>sprites\spr_Sword_Stick_Pickup</sprite>
+            <sprite>sprites\spr_Sword_Stick_Pickup_Right</sprite>
+            <sprite>sprites\spr_Sword_Stick_Pickup_Left</sprite>
           </sprites>
           <sprites name="Boomerang">
-            <sprite>sprites\spr_Boomerang</sprite>
+            <sprite>sprites\spr_Boomerang_Right</sprite>
+            <sprite>sprites\spr_Boomerang_Left</sprite>
             <sprite>sprites\spr_Boomerang_HUD</sprite>
-            <sprite>sprites\spr_Boomerang_Pickup</sprite>
+            <sprite>sprites\spr_Boomerang_Pickup_Right</sprite>
+            <sprite>sprites\spr_Boomerang_Pickup_Left</sprite>
           </sprites>
           <sprites name="Mjolnir">
             <sprite>sprites\spr_Mjolnir_Right</sprite>
             <sprite>sprites\spr_Mjolnir_HUD</sprite>
-            <sprite>sprites\spr_Mjolnir_Pickup</sprite>
+            <sprite>sprites\spr_Mjolnir_Pickup_Right</sprite>
+            <sprite>sprites\spr_Mjolnir_Pickup_Left</sprite>
             <sprite>sprites\spr_Mjolnir_Left</sprite>
           </sprites>
         </sprites>
@@ -1310,26 +1316,40 @@
       <object>objects\obj_Clock</object>
     </objects>
     <objects name="Weapons">
-      <object>objects\obj_Parent_Gun</object>
-      <objects name="Shotguns">
-        <object>objects\obj_Pump_Shotgun</object>
-        <objects name="Casings">
-          <object>objects\obj_Casing_Shotgun</object>
+      <object>objects\obj_Parent_Weapon</object>
+      <objects name="Guns">
+        <objects name="Handguns">
+          <object>objects\obj_Potato_Handgun</object>
+          <object>objects\obj_Magnum</object>
+          <object>objects\obj_Beretta</object>
+          <objects name="Casings">
+            <object>objects\obj_Casing_Handgun</object>
+          </objects>
+        </objects>
+        <objects name="Rifles">
+          <object>objects\obj_AR15</object>
+          <object>objects\obj_P90</object>
+          <object>objects\obj_Laser_Rifle</object>
+          <object>objects\obj_Lapua</object>
+        </objects>
+        <objects name="Shotguns">
+          <object>objects\obj_Pump_Shotgun</object>
+          <objects name="Casings">
+            <object>objects\obj_Casing_Shotgun</object>
+          </objects>
         </objects>
       </objects>
-      <objects name="Handguns">
-        <object>objects\obj_Potato_Handgun</object>
-        <object>objects\obj_Magnum</object>
-        <object>objects\obj_Beretta</object>
-        <objects name="Casings">
-          <object>objects\obj_Casing_Handgun</object>
+      <objects name="Melee">
+        <objects name="One Handed Melee">
+          <object>objects\obj_Sword</object>
+          <object>objects\obj_Boomerang</object>
+          <object>objects\obj_Stick</object>
+          <object>objects\obj_Mjolnir</object>
         </objects>
-      </objects>
-      <objects name="Rifles">
-        <object>objects\obj_AR15</object>
-        <object>objects\obj_P90</object>
-        <object>objects\obj_Laser_Rifle</object>
-        <object>objects\obj_Lapua</object>
+        <objects name="Two Handed Melee">
+          <object>objects\obj_Parent_Two_Handed_Melee</object>
+          <object>objects\obj_Morning_Star</object>
+        </objects>
       </objects>
     </objects>
     <objects name="Projectiles">
@@ -1359,24 +1379,19 @@
       <object>objects\obj_Sightline_Circle</object>
       <object>objects\obj_Sightline_Square</object>
     </objects>
-    <objects name="Melee">
-      <objects name="One Handed Melee">
-        <object>objects\obj_Parent_One_Handed_Melee</object>
-        <object>objects\obj_Sword</object>
-        <object>objects\obj_Stick</object>
-      </objects>
-      <objects name="Two Handed Melee">
-        <object>objects\obj_Parent_Two_Handed_Melee</object>
-        <object>objects\obj_Morning_Star</object>
-      </objects>
-    </objects>
     <objects name="Level Setup">
       <objects name="Props">
-        <object>objects\obj_Shelves</object>
+        <object>objects\obj_Shelves_Right</object>
+        <object>objects\obj_Shelves_Left</object>
         <object>objects\obj_Bread</object>
+        <object>objects\obj_Drain</object>
+        <object>objects\obj_Smudge</object>
         <object>objects\obj_Server</object>
         <object>objects\obj_Pipe</object>
         <object>objects\prop_Crate</object>
+        <object>objects\obj_Tree</object>
+        <object>objects\obj_Small_Cactus</object>
+        <object>objects\obj_Large_Cactus</object>
       </objects>
       <objects name="Walls">
         <object>objects\obj_Parent_Wall</object>
@@ -1430,13 +1445,30 @@
           <object>objects\obj_Wall_Desert_Intersection_Left</object>
           <object>objects\obj_Wall_Desert_Intersection_Right</object>
         </objects>
+        <objects name="Cliffs">
+          <object>objects\obj_Wall_Cliff_Left</object>
+          <object>objects\obj_Wall_Cliff_Right</object>
+          <object>objects\obj_Wall_Cliff_Down</object>
+          <object>objects\obj_Wall_Cliff_Corner_Right_Up</object>
+          <object>objects\obj_Wall_Cliff_Corner_Left_Up</object>
+          <object>objects\obj_Wall_Cliff_Full</object>
+          <object>objects\obj_Wall_Cliff_Turn_Right</object>
+          <object>objects\obj_Wall_Cliff_Turn_Left</object>
+          <object>objects\obj_Wall_Cliff_Alone</object>
+          <object>objects\obj_Wall_Cliff_Left_Right</object>
+          <object>objects\obj_Wall_Cliff_Intersection_Left</object>
+          <object>objects\obj_Wall_Cliff_Intersection_Right</object>
+        </objects>
       </objects>
       <objects name="Floors">
         <object>objects\obj_Parent_Floor</object>
+        <objects name="Grass">
+          <object>objects\obj_Grass</object>
+          <object>objects\obj_Grass_Alt</object>
+          <object>objects\obj_Grass_Alt_2</object>
+        </objects>
         <objects name="Concrete">
           <object>objects\obj_Concrete_Floor</object>
-          <object>objects\obj_Concrete_Floor_Alt</object>
-          <object>objects\obj_Concrete_Floor_Alt_2</object>
         </objects>
         <objects name="Sand">
           <object>objects\obj_Sand</object>

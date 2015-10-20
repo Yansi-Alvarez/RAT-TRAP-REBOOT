@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_Parent_One_Handed_Melee</parentName>
+  <parentName>obj_Parent_Weapon</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,19 +27,108 @@
             <kind>1</kind>
             <string>event_inherited();
 
-global.obj_One_Handed_Melee_In_Use = obj_Sword;
+obj_Weapon_In_Use = obj_Sword;
 
-global.sprite_index_Right_One_Handed_Melee_In_Use = spr_Sword_Basic_Right;
+sprite_index_Right_Weapon_In_Use_Equipped = spr_Sword_Basic_Right;
 
-global.sprite_index_Left_One_Handed_Melee_In_Use = spr_Sword_Basic_Left;
+sprite_index_Left_Weapon_In_Use_Equipped = spr_Sword_Basic_Left;
+
+sprite_index_Left_Weapon_In_Use_Pick_Up = spr_Sword_Basic_Pickup_Left;
+
+sprite_index_Right_Weapon_In_Use_Pick_Up = spr_Sword_Basic_Pickup_Right;
+
+sprite_index_Weapon_Hud = spr_Sword_Basic_HUD;
+
+correction = 160;
+
+correction_2 = 200;
 
 //slash_animation = false;
+
+sprite_index = choose(spr_Sword_Basic_Pickup_Right, spr_Sword_Basic_Pickup_Left);
+
+text_weapon = "Press E to equip [Basic Sword]";
+popup_width_weapon = 125;
+popup_padding_weapon = 3;
+draw_below_weapon = false;
+font_weapon = Game_Font;
+font_color_weapon = c_lime; 
+bak_color_weapon = c_black;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited();
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
