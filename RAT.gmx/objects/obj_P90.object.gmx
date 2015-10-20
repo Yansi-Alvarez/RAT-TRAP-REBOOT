@@ -61,7 +61,7 @@ bullet = obj_Handgun_Bullet;
 
 casings = obj_Casing_Handgun;
 
-gun_flash = obj_Muzzle_Flash;
+weapon_flash = obj_Muzzle_Flash;
 
 alarm_timer = noone;
 
