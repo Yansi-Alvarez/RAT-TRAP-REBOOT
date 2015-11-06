@@ -59,7 +59,7 @@ ldx = 0;
 
 ldy = 0;
 
-weapon_flash = obj_Muzzle_Flash;
+weapon_flash = obj_Large_Muzzle_Flash;
 
 ammo = 1;
 
