@@ -77,7 +77,7 @@ clock_string = noone;
 
 //Booleans for room states
 
-terminal_room = false;
+terminal_room = true;
 
 cage_room = false;
 
@@ -103,6 +103,8 @@ global.mission_input = noone;
 code_slot_1 = "";
 code_slot_2 = "";
 code_slot_3 = "";
+
+play_song = true;
 </string>
           </argument>
         </arguments>
@@ -159,6 +161,16 @@ inst_exit = collision_rectangle((room_width - (room_width/6)), draw_text_y2 + ((
 if (exit_room == true) and (terminal_room == false) and (cage_room == false) and (start_room == false) {
 
     game_end();
+}
+
+if ((lab_room) or (terminal_room) or (cage_room)) and (play_song) {
+
+    audio_play_sound(snd_Rat_Menu, 1, 0);
+    play_song = false;
+}
+
+if (!audio_is_playing(snd_Rat_Menu)) and ((lab_room) or (terminal_room) or (cage_room)) {
+     play_song = true;
 }
 </string>
           </argument>
@@ -223,6 +235,13 @@ if (cage_room == false) and (lab_room == false) {
     if (string_length(string_letters(keyboard_string)) == code_number_length) and (keyboard_check_pressed(vk_enter)) { 
     
         global.seed_input = keyboard_string;
+        
+        terminal_room = false;
+        cage_room = false;
+        lab_room = false;
+        play_song = false;
+        
+        audio_pause_sound(snd_Rat_Menu);
         
         code_slot_1 = string_char_at(global.seed_input, 1);
         code_slot_2 = string_char_at(global.seed_input, 2);
@@ -418,7 +437,7 @@ for (i = 1; i &lt; 9; i += 1) {
             }
         }
     }
-*/
+
     //Start Box
     if (i == 7) {
     
@@ -440,7 +459,7 @@ for (i = 1; i &lt; 9; i += 1) {
             commence = false;
         }
     }
-    
+*/   
     //End Box
     if (i == 8) {
     

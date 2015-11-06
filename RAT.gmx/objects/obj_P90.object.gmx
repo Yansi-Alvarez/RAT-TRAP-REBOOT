@@ -43,15 +43,15 @@ casings = obj_Casing_Handgun;
 
 bullet_timer = true;
 
-bullet_speed = 60;
+bullet_speed = 30;
 
 correction = 160;
 
 correction_2 = 200;
 
-ammo = 20;
+ammo = 36;
 
-ammo_capacity = 20;
+ammo_capacity = 36;
 
 ammo_reserve = 600;
 
@@ -75,6 +75,8 @@ ldy = lengthdir_y(5, point_direction(x,y,mouse_x,mouse_y));
 
 screen_jiggle = true;
 
+firing = true;
+
 sprite_index = choose(spr_Rifle_P90_Pickup_Left, spr_Rifle_P90_Pickup_Right);
 
 text_weapon = "Press E to equip [P90]";
@@ -84,6 +86,29 @@ draw_below_weapon = false;
 font_weapon = Game_Font;
 font_color_weapon = c_lime; 
 bak_color_weapon = c_black;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited();
 </string>
           </argument>
         </arguments>

@@ -428,6 +428,7 @@ for (i = 0; i &lt; obj_Director.grid_width; i += 1) {
 
 instance_create( 0, 0, obj_Clock);
 //instance_create( 0, 0, obj_Fade);
+
 </string>
           </argument>
         </arguments>

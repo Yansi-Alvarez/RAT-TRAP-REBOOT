@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>image_angle = point_direction(x,y,mouse_x,mouse_y);
 
-alarm[0] = 10;
+//alarm[0] = 10;
 
 bullet_damage = 1;
 </string>

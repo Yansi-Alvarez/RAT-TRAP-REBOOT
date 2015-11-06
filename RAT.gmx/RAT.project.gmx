@@ -326,6 +326,8 @@
     <sounds name="Menu">
       <sound>sound\snd__Button</sound>
     </sounds>
+    <sound>sound\snd_Rat_Menu</sound>
+    <sound>sound\snd_Rat_Level</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Rat">

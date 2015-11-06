@@ -130,6 +130,31 @@ aud = noone;
 floating_number = 0;
 
 flip_float = false;
+
+firing = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>firing = true;
 </string>
           </argument>
         </arguments>
@@ -857,7 +882,7 @@ if (weapon_type == 2) {
 
     if (weapon_collision == true) and (ammo &gt;= 1) {
     
-        if mouse_check_button_pressed(mb_left) and (other.potato_weapon_bullet_timer == true) and ((global.weapon_attach_right_arm == true) or 
+        if mouse_check_button_pressed(mb_left) and (bullet_timer == true) and ((global.weapon_attach_right_arm == true) or 
         (global.weapon_attach_left_arm == true)) {
             
             other.object_bullet = instance_create(x, y, bullet);
@@ -885,7 +910,7 @@ if (weapon_type == 3) {
 
     if (weapon_collision == true) and (ammo &gt;= 1) {
     
-        if mouse_check_button_pressed(mb_left) and (other.bullet_timer == true) and ((global.weapon_attach_right_arm == true) or 
+        if mouse_check_button_pressed(mb_left) and (bullet_timer == true) and ((global.weapon_attach_right_arm == true) or 
         (global.weapon_attach_left_arm == true)) {
             
             audio_play_sound(snd_Shotgun,1,0);      
@@ -923,7 +948,7 @@ if (weapon_type == 4) {
 
     if (weapon_collision == true) and (ammo &gt;= 1) {
     
-        if mouse_check_button_pressed(mb_left) and (other.bullet_timer == true) and ((global.weapon_attach_right_arm == true) or 
+        if mouse_check_button_pressed(mb_left) and (bullet_timer == true) and ((global.weapon_attach_right_arm == true) or 
         (global.weapon_attach_left_arm == true)) {
         
             //sprite_index = weapon_charging_animation_left;
@@ -971,8 +996,14 @@ if (weapon_type = 5) and (ammo &gt;= 1) {
     
         if (mouse_check_button(mb_left) and (bullet_timer == true)) and ((global.weapon_attach_right_arm == true) or 
         (global.weapon_attach_left_arm == true)) {
+            
+            if (firing) {
                 
-            object_bullet = instance_create(x, y, bullet);
+                object_bullet = instance_create(x, y, bullet);
+                firing = false;
+                alarm[7] = 1;
+            }
+            
             audio_play_sound(shooting_sound, 1, 0);
             object_bullet.direction = point_direction(obj_Rat_Head.x, obj_Rat_Head.y, mouse_x, mouse_y);
             other.weapon_casings = instance_create(x, y, casings);

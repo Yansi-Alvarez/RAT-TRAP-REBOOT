@@ -69,9 +69,9 @@ sprite_index = choose(spr_Rifle_AR15_Pickup_Left, spr_Rifle_AR15_Pickup_Right);
 
 screen_jiggle = true;
 
-ammo = 6;
+ammo = 16;
 
-ammo_capacity = 6;
+ammo_capacity = 16;
 
 ammo_reserve = 180;
 
