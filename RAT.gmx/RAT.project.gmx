@@ -316,6 +316,7 @@
       <sound>sound\snd_No_Ammo</sound>
       <sound>sound\snd_Metal_Clang</sound>
       <sound>sound\snd_Laser_Charge</sound>
+      <sound>sound\snd_Sniper</sound>
     </sounds>
     <sounds name="Misc.">
       <sound>sound\snd_Radio</sound>
@@ -1131,6 +1132,17 @@
             <sprites name="Animations">
               <sprite>sprites\spr_Handgun_Magnum_Fire_Left</sprite>
               <sprite>sprites\spr_Handgun_Magnum_Fire_Right</sprite>
+            </sprites>
+          </sprites>
+          <sprites name="Flintlock">
+            <sprite>sprites\spr_Handgun_Flintlock_Right</sprite>
+            <sprite>sprites\spr_Handgun_Flintlock_Pickup_Right</sprite>
+            <sprite>sprites\spr_Handgun_Flintlock_Pickup_Left</sprite>
+            <sprite>sprites\spr_Handgun_Flintlock_HUD</sprite>
+            <sprite>sprites\spr_Handgun_Flintlock_Left</sprite>
+            <sprites name="Animations">
+              <sprite>sprites\spr_Hangun_Flintlock_Fire_Right</sprite>
+              <sprite>sprites\spr_Handgun_Flintlock_Fire_Left</sprite>
             </sprites>
           </sprites>
         </sprites>
