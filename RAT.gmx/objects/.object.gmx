@@ -27,22 +27,6 @@
             <kind>1</kind>
             <string>obj_Weapon_In_Use = noone;
 
-laser_shoot = noone;
-
-max_length = noone;
-
-laser_width = noone;
-
-lx = noone;
-
-ly = noone;
-
-length_x = noone;
-
-length_y = noone;
-
-beginning = noone;
-
 sprite_index_Right_Weapon_In_Use_Equipped = noone;
 
 sprite_index_Left_Weapon_In_Use_Equipped = noone;
@@ -130,52 +114,6 @@ aud = noone;
 floating_number = 0;
 
 flip_float = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="6">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>length_y += 20;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="5">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>length_x += 20;
 </string>
           </argument>
         </arguments>
@@ -941,10 +879,8 @@ if (weapon_type == 4) {
                 //find_distance_to_object(x, y, angle, object, maxdist);
                 //distance = scr_find_distance_to_object(obj_Weapon_In_Use.x, obj_Weapon_In_Use.y, obj_Weapon_In_Use.image_angle, obj_Parent_Wall, 200);
                 //object_bullet.sprite_width = distance;
-                //scr_Laser(circle_radius, circle_outline, laser_direction, max_length, object_collision, weapon_using, color1, color2);
-                //scr_Laser( 50, 20, obj_Rat_Body.weapon_equipped.image_angle, 400, obj_Parent_Wall, obj_Weapon_In_Use, c_aqua, c_red );
-                laser_shoot = true;
-                
+                //scr_Laser(circle_radius, circle_outline, laser_direction, max_length, object_collision);
+                scr_Laser( 10, 1, point_direction(obj_Rat_Head.x, obj_Rat_Head.y, mouse_x, mouse_y), 400, obj_Parent_Wall );
                 alarm[0] = cool_down;
                 ammo -= 1;
             //}
@@ -1340,34 +1276,6 @@ if ( sprite_index == gun_charging_animation_right ) {
             <string>//Draw Event for obj_Parent_Weapon
 
 draw_self();
-
-if ((laser_shoot) and (weapon_type == 4)) {
-
-    //draw_circle_colour(obj_Weapon_In_Use.x, obj_Weapon_In_Use.y, 20, c_white, c_red, 1);
-    var lx = obj_Weapon_In_Use.x + lengthdir_x(max_length, point_direction(obj_Rat_Head.x, obj_Rat_Head.y, mouse_x, mouse_y));
-    var ly = obj_Weapon_In_Use.y + lengthdir_y(max_length, point_direction(obj_Rat_Head.x, obj_Rat_Head.y, mouse_x, mouse_y));
-    
-    if (laser_shoot) {
-    
-        if (length_x &lt;= lx) and (!collision_line(obj_Weapon_In_Use.x, obj_Weapon_In_Use.y, length_x, length_y, obj_Parent_Wall, false, true)){
-        
-            alarm[5] = 1;
-        }
-        
-        if (length_y &lt;= ly) and (!collision_line(obj_Weapon_In_Use.x, obj_Weapon_In_Use.y, length_x, length_y, obj_Parent_Wall, false, true)) {
-        
-            alarm[6] = 1;
-        }
-    }
-        
-    draw_line_width_colour(obj_Weapon_In_Use.x, obj_Weapon_In_Use.y, length_x, length_y, laser_width, c_red, c_red);
-    
-    if ((length_x &gt;= lx) or (length_y &gt;= ly)) or (collision_line(obj_Weapon_In_Use.x, obj_Weapon_In_Use.y, length_x, length_y, obj_Parent_Wall, false, true)) {
-    
-        laser_shoot = false;
-        //beginning = true;
-    }
-}
 
 if (!place_meeting(x, y, obj_Rat_Body)) { //and (weapon_picked_up == false) and (equipped = false)) {
 

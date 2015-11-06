@@ -29,6 +29,22 @@
 
 image_speed = 0.3;
 
+laser_shoot = false;
+
+length_x = 0;
+
+length_y = 0;
+
+lx = 0;
+
+ly = 0;
+
+laser_width = 5;
+
+max_length = 100;
+
+beginning = true;
+
 obj_Weapon_In_Use = obj_Laser_Rifle;
 
 sprite_index_Right_Weapon_In_Use_Equipped = spr_Rifle_Laser_Right;
@@ -84,6 +100,52 @@ draw_below_weapon = false;
 font_weapon = Game_Font;
 font_color_weapon = c_lime; 
 bak_color_weapon = c_black;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited();
 </string>
           </argument>
         </arguments>

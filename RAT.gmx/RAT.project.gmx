@@ -1382,6 +1382,7 @@
     </objects>
     <objects name="Particles">
       <object>objects\obj_Muzzle_Flash</object>
+      <object>objects\obj_Large_Muzzle_Flash</object>
       <object>objects\obj_Death</object>
       <object>objects\obj_Slash</object>
       <object>objects\obj_Death_Particle_0</object>
