@@ -1095,6 +1095,20 @@
             <sprite>sprites\spr_Mjolnir_Pickup_Left</sprite>
             <sprite>sprites\spr_Mjolnir_Left</sprite>
           </sprites>
+          <sprites name="Axe">
+            <sprite>sprites\spr_Axe_Right</sprite>
+            <sprite>sprites\spr_Axe_Pickup_Right</sprite>
+            <sprite>sprites\spr_Axe_Pickup_Left</sprite>
+            <sprite>sprites\spr_Axe_HUD</sprite>
+            <sprite>sprites\spr_Axe_Left</sprite>
+          </sprites>
+          <sprites name="Shank">
+            <sprite>sprites\spr_Shank_Right</sprite>
+            <sprite>sprites\spr_Shank_Pickup_Right</sprite>
+            <sprite>sprites\spr_Shank_Pickup_Left</sprite>
+            <sprite>sprites\spr_Shank_HUD</sprite>
+            <sprite>sprites\spr_Shank_Left</sprite>
+          </sprites>
         </sprites>
         <sprites name="Two-Handed">
           <sprites name="Morningstar">
@@ -1102,6 +1116,13 @@
             <sprite>sprites\spr_Morningstar_Right</sprite>
             <sprite>sprites\spr_Morningstar_HUD</sprite>
             <sprite>sprites\spr_Morningstar_Pickup</sprite>
+          </sprites>
+          <sprites name="Honey Hammer">
+            <sprite>sprites\spr_Honey_Hammer_Left</sprite>
+            <sprite>sprites\spr_Honey_Hammer_Right</sprite>
+            <sprite>sprites\spr_Honey_Hammer_HUD</sprite>
+            <sprite>sprites\spr_Honey_Hammer_Pickup_Right</sprite>
+            <sprite>sprites\spr_Honey_Hammer_Pickup_Left</sprite>
           </sprites>
         </sprites>
       </sprites>
@@ -1146,6 +1167,13 @@
               <sprite>sprites\spr_Hangun_Flintlock_Fire_Right</sprite>
               <sprite>sprites\spr_Handgun_Flintlock_Fire_Left</sprite>
             </sprites>
+          </sprites>
+          <sprites name="Laser Pistol">
+            <sprite>sprites\spr_Handgun_Laser_Left</sprite>
+            <sprite>sprites\spr_Handgun_Laser_Right</sprite>
+            <sprite>sprites\spr_Handgun_Laser_Pickup_Right</sprite>
+            <sprite>sprites\spr_Handgun_Laser_Pickup_Left</sprite>
+            <sprite>sprites\spr_Handgun_Laser_HUD</sprite>
           </sprites>
         </sprites>
         <sprites name="Shotguns">
@@ -1284,6 +1312,11 @@
         <sprites name="Dead Rat">
           <sprite>sprites\spr_Dead_Rat</sprite>
         </sprites>
+      </sprites>
+    </sprites>
+    <sprites name="Followers">
+      <sprites name="Braces">
+        <sprite>sprites\Chomps</sprite>
       </sprites>
     </sprites>
     <sprites name="Loading Screen">
@@ -1527,6 +1560,7 @@
     <room>rooms\rm_Loading_Screen</room>
     <room>rooms\rm_Level_Generation</room>
     <room>rooms\RAT</room>
+    <room>rooms\GOD</room>
   </rooms>
   <constants number="2">
     <constant name="GM_build_date">42094.8957887616</constant>
