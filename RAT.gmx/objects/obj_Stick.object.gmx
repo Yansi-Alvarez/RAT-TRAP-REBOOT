@@ -39,6 +39,10 @@ sprite_index_Right_Weapon_In_Use_Pick_Up = spr_Sword_Stick_Pickup_Right;
 
 sprite_index_Weapon_Hud = spr_Sword_Stick_HUD;
 
+cool_down = 1;
+
+weapon_type = 6;
+
 correction = 160;
 
 correction_2 = 200;

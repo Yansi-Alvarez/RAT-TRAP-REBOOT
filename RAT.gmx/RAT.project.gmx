@@ -1055,7 +1055,7 @@
           <sprite>sprites\spr_Particle_Slash_Small_Right</sprite>
           <sprite>sprites\spr_Particle_Slash_Right</sprite>
           <sprite>sprites\spr_Particle_Slash_Left</sprite>
-          <sprite>sprites\NEW_SLASH</sprite>
+          <sprite>sprites\spr_Particle_New_Slash</sprite>
         </sprites>
         <sprite>sprites\spr_Particle_Hit</sprite>
         <sprite>sprites\spr_Particle_Explosion_Test</sprite>
@@ -1063,6 +1063,7 @@
       <sprite>sprites\spr_Particle_Smoke</sprite>
       <sprite>sprites\spr_Particle_Alert</sprite>
       <sprite>sprites\spr_Particle_Spawn</sprite>
+      <sprite>sprites\spr_Collision_Box</sprite>
     </sprites>
     <sprites name="Weapons">
       <sprites name="Melee">
@@ -1414,6 +1415,9 @@
       <object>objects\obj_Bullbug</object>
       <object>objects\obj_Lightning_Bug</object>
       <object>objects\obj_Scorpion</object>
+      <object>objects\obj_Bladebug</object>
+      <object>objects\obj_Strail_Slug</object>
+      <object>objects\obj_Strail_Shell</object>
     </objects>
     <objects name="Particles">
       <object>objects\obj_Muzzle_Flash</object>
@@ -1427,6 +1431,7 @@
       <object>objects\obj_Bullet_Death</object>
       <object>objects\obj_Sightline_Circle</object>
       <object>objects\obj_Sightline_Square</object>
+      <object>objects\obj_Gust</object>
     </objects>
     <objects name="Level Setup">
       <objects name="Props">

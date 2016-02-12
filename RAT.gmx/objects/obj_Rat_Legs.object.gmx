@@ -107,6 +107,52 @@ if ((global.direction_player &gt;= 270) and (global.direction_player &lt;= 359))
     }
 }
 
+// Wall collision code
+/*
+obj_Collision_Box.x = obj_Rat_Head.x;
+obj_Collision_Box.y = obj_Rat_Head.y;
+
+if (keyboard_check(ord('D')) and place_meeting(obj_Collision_Box.x + (hspeed * 2), obj_Collision_Box.y, obj_Parent_Wall))) {
+    
+    obj_Rat_Head.hspeed = 0;
+    obj_Rat_Body.hspeed = 0;
+    obj_Rat_Front_Arm.hspeed = 0;
+    obj_Rat_Back_Arm.hspeed = 0;
+    hspeed = 0;
+    obj_Rat_Tail.hspeed = 0;
+}
+
+if (keyboard_check(ord('A')) and place_meeting(obj_Collision_Box.x + (hspeed * 2), obj_Collision_Box.y, obj_Parent_Wall))) {
+
+    obj_Rat_Head.hspeed = 0;
+    obj_Rat_Body.hspeed = 0;
+    obj_Rat_Front_Arm.hspeed = 0;
+    obj_Rat_Back_Arm.hspeed = 0;
+    hspeed = 0;
+    obj_Rat_Tail.hspeed = 0;
+}
+
+if (keyboard_check(ord('W')) and place_meeting(obj_Collision_Box.x + (vspeed * 2), obj_Collision_Box.y, obj_Parent_Wall))) {
+
+    obj_Rat_Head.vspeed = 0;
+    obj_Rat_Body.vspeed = 0;
+    obj_Rat_Front_Arm.vspeed = 0;
+    obj_Rat_Back_Arm.vspeed = 0;
+    vspeed = 0;
+    obj_Rat_Tail.vspeed = 0;
+}
+
+if (keyboard_check(ord('S')) and place_meeting(obj_Collision_Box.x + (vspeed * 2), obj_Collision_Box.y, obj_Parent_Wall))) {
+    
+    obj_Rat_Head.vspeed = 0;
+    obj_Rat_Body.vspeed = 0;
+    obj_Rat_Front_Arm.vspeed = 0;
+    obj_Rat_Back_Arm.vspeed = 0;
+    vspeed = 0;
+    obj_Rat_Tail.vspeed = 0;
+}
+*/
+
 if keyboard_check(ord('D')) {
 
     image_speed = 0.3;
@@ -170,6 +216,7 @@ if keyboard_check(ord('S')) {
         obj_Rat_Tail.vspeed = 0;
     }
 }
+//
 
 if keyboard_check_released(ord('D')) {
 

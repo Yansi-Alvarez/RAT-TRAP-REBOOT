@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>//global.obj_enemy = noone;
 
+//instance_create(x, y, obj_Enemy_Collision_Circle);
+
 i = '';
 
 experience = noone;
@@ -227,7 +229,60 @@ shoot = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (alpha_value == 1) and (loop = false) and (looping &lt;= 6) {
+            <string>// obj_Enemy_Collision_Cirlce.x = obj_Enemy_Collision_Circle.x;
+// obj_Enemy_Collision_Cirlce.y = obj_Enemy_Collision_Circle.y;
+
+// image_xscale = ???;
+// image_yscale = ???;
+
+/*
+// Code for the lightining bug
+
+motion_set(random(360), enemy_speed);
+
+if (place_meeting(obj_Enemy_Collision_Circle.x, obj_Enemy_Collision_Circle.y, obj_Player_Collision_Circle) and !(shoot) )
+{
+    object_bullet = instance_create(x, y, bullet);
+    audio_play_sound(shooting_sound, 1, 0);
+    object_bullet.direction = point_direction(x, y, obj_Rat_Body.x, obj_Rat_Body.y);
+    object_bullet.speed = bullet_speed;
+    shoot = true;
+    
+    if (!alarm[4]) {
+        
+        alarm[4] = cooldown;
+    }
+}
+*/
+
+/*
+// Code for the bladebug
+
+motion_set(irandom(4), enemy_speed);
+
+if (place_meeting(obj_Enemy_Collision_Circle.x, obj_Enemy_Collision_Circle.y, obj_Player_Collision_Circle))
+{
+    audio_play_sound(moving_sound, 1, 0);
+}
+*/
+
+/*
+// Code for the slug
+
+motion_set(irandom(4), enemy_speed);
+
+obj_Strail_Shell.x = obj_Strail_Slug.x;
+obj_Strail_Shell.y = obj_Strail_Slug.y;
+
+if (trail) {
+
+    instance_create(obj_Strail_Shell.x, obj_Strail_Shell.y, obj_Trail);
+    trail = false;
+    alarm[?] = ?;
+}
+*/
+
+if (alpha_value == 1) and (loop = false) and (looping &lt;= 6) {
 
     alarm[0] = 1;
     loop = true;
@@ -262,6 +317,7 @@ direction_enemy = point_direction(obj_Parent_Enemy.x, obj_Parent_Enemy.y, obj_Ra
 
 //motion_set(random(360), enemy_speed);
 /*
+//  Redo code so that the rat collides with a circle that is formed from the enemies
 if (distance_to_object(obj_Rat_Body) &lt;= 150) and (shoot == false){
 
     object_bullet = instance_create(x, y, bullet);
@@ -408,7 +464,54 @@ if (enemy_death == true) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enemy_speed = -enemy_speed;
+            <string>// motion_set(irandom(4), enemy_speed);
+
+//enemy_speed = -enemy_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_Slash">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if ((hurt_flash == false) and (enemy_health &gt; 0)) {
+    
+    enemy_health -= obj_Parent_Bullet.bullet_damage;    
+    instance_create(obj_Parent_Bullet.x, obj_Parent_Bullet.y, obj_Particle_Hit);
+    
+    i = instance_create(x, y - damage_generation_corrector, obj_Damage);
+    i.str = string(contact_damage);
+    hurt_flash = true;
+    
+    with (other) {
+    
+        instance_destroy();
+    }
+}
+
+//Death for Enemy
+
+if (death_flash == false) and (enemy_health &lt;= 0) {
+   
+     enemy_speed = 0;
+     death_flash = true;
+     
+}
 </string>
           </argument>
         </arguments>

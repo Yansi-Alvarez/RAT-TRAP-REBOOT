@@ -39,6 +39,10 @@ sprite_index_Right_Weapon_In_Use_Pick_Up = spr_Mjolnir_Pickup_Right;
 
 sprite_index_Weapon_Hud = spr_Mjolnir_HUD;
 
+weapon_type = 6;
+
+cool_down = 5;
+
 sprite_index = choose(spr_Mjolnir_Pickup_Right, spr_Mjolnir_Pickup_Left);
 
 correction = 160;

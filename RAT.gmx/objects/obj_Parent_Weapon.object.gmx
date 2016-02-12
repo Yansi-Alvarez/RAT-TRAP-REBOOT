@@ -55,6 +55,8 @@ sprite_index_Weapon_Hud = noone;
 
 bullet_timer = true;
 
+slash_timer = true;
+
 correction = noone;
 
 correction_2 = noone;
@@ -351,6 +353,8 @@ if (screen_jiggle == true) {
           <argument>
             <kind>1</kind>
             <string>bullet_timer = true;
+
+slash_timer = true;
 </string>
           </argument>
         </arguments>
@@ -777,12 +781,26 @@ if  ((global.direction_player &gt;= 0) and (global.direction_player &lt;= 89)) a
 
     if (global.weapon_attach_left_arm == true) and (weapon_collision == true) and (global.weapon_attach_right_arm == false) {
         
-        obj_Rat_Body.depth = 2;
+        obj_Rat_Head.depth = 0;
+        obj_Rat_Body.depth = 0;
+        obj_Rat_Front_Arm.depth = 0;
+        obj_Rat_Back_Arm.depth = 2;
+        obj_Rat_Legs.depth = 0;
+        obj_Rat_Tail.depth = 0;
+        
+        obj_Parent_Weapon.depth = 1;
     }
     
     if (weapon_collision == true) and (global.weapon_attach_right_arm == true) and (global.weapon_attach_left_arm == false) {
         
-        obj_Rat_Body.depth = 0;
+        obj_Rat_Head.depth = 5;
+        obj_Rat_Body.depth = 3;
+        obj_Rat_Front_Arm.depth = 0;
+        obj_Rat_Back_Arm.depth = 6;
+        obj_Rat_Legs.depth = 4;
+        obj_Rat_Tail.depth = 2;
+        
+        obj_Parent_Weapon.depth = 4;
     }
 }
 
@@ -790,13 +808,26 @@ if ((global.direction_player &gt;= 90) and (global.direction_player &lt;= 179)) 
     
     if (weapon_collision == true) and (global.weapon_attach_left_arm == true) and (global.weapon_attach_right_arm == false) {
         
-        obj_Rat_Body.depth = 0;
+        obj_Rat_Head.depth = 2;
+        obj_Rat_Body.depth = 3;
+        obj_Rat_Front_Arm.depth = 2;
+        obj_Rat_Back_Arm.depth = 4;
+        obj_Rat_Legs.depth = 4;
+        obj_Rat_Tail.depth = 4;
+        
+        obj_Parent_Weapon.depth = 1;
     }
     
     if (weapon_collision == true) and (global.weapon_attach_right_arm == true) and (global.weapon_attach_left_arm == false) {
         
-        //obj_Rat_Body.depth = 2;
-        obj_Rat_Body.depth = 0;
+        obj_Rat_Head.depth = 1;
+        obj_Rat_Body.depth = 2;
+        obj_Rat_Front_Arm.depth = 1;
+        obj_Rat_Back_Arm.depth = 4;
+        obj_Rat_Legs.depth = 3;
+        obj_Rat_Tail.depth = 1;
+        
+        obj_Parent_Weapon.depth = 3;
     }
 }
 
@@ -804,12 +835,26 @@ if ((global.direction_player &gt;= 180) and (global.direction_player &lt;= 269))
     
     if (weapon_collision == true) and (global.weapon_attach_left_arm == true) and (global.weapon_attach_right_arm == false) {
         
-        obj_Rat_Body.depth = 0;
+        obj_Rat_Head.depth = 2;
+        obj_Rat_Body.depth = 3;
+        obj_Rat_Front_Arm.depth = 0;
+        obj_Rat_Back_Arm.depth = 4;
+        obj_Rat_Legs.depth = 4;
+        obj_Rat_Tail.depth = 2;
+        
+        obj_Parent_Weapon.depth = 4;
     }
     
     if (weapon_collision == true) and (global.weapon_attach_right_arm == true) and (global.weapon_attach_left_arm == false) {
         
-        obj_Rat_Body.depth = 1;
+        obj_Rat_Head.depth = 0;
+        obj_Rat_Body.depth = 0;
+        obj_Rat_Front_Arm.depth = 0;
+        obj_Rat_Back_Arm.depth = 2;
+        obj_Rat_Legs.depth = 0;
+        obj_Rat_Tail.depth = 0;
+        
+        obj_Parent_Weapon.depth = 1;
     }
 }
 
@@ -817,12 +862,26 @@ if ((global.direction_player &gt;= 270) and (global.direction_player &lt;= 359))
     
     if (weapon_collision == true) and (global.weapon_attach_left_arm == true) and (global.weapon_attach_right_arm == false) {
         
-        obj_Rat_Body.depth = 1;
+        obj_Rat_Head.depth = 1;
+        obj_Rat_Body.depth = 2;
+        obj_Rat_Front_Arm.depth = 1;
+        obj_Rat_Back_Arm.depth = 4;
+        obj_Rat_Legs.depth = 3;
+        obj_Rat_Tail.depth = 1;
+        
+        obj_Parent_Weapon.depth = 3;
     }
     
     if (weapon_collision == true) and (global.weapon_attach_right_arm == true) and (global.weapon_attach_left_arm == false) {
         
-        obj_Rat_Body.depth = 0;
+        obj_Rat_Head.depth = 2;
+        obj_Rat_Body.depth = 3;
+        obj_Rat_Front_Arm.depth = 1;
+        obj_Rat_Back_Arm.depth = 4;
+        obj_Rat_Legs.depth = 4;
+        obj_Rat_Tail.depth = 4;
+        
+        obj_Parent_Weapon.depth = 2;
     }
 }
 
@@ -1028,6 +1087,7 @@ if (weapon_type = 5) and (ammo &gt;= 1) {
         }
     }
 }
+
 if (weapon_type == 1) or (weapon_type == 2) or (weapon_type == 3) or (weapon_type == 4) or (weapon_type == 5) {
     
     if (ammo &gt;= 1) {
@@ -1063,6 +1123,24 @@ if (weapon_type == 1) or (weapon_type == 2) or (weapon_type == 3) or (weapon_typ
         
         ammo = reloaded_ammo + ammo;
     }
+}
+
+// Sword, Stick, Mjolnir, Morning Star
+if ( weapon_type == 6 ) and ( weapon_collision == true )
+{
+    if (mouse_check_button(mb_left) and ((global.weapon_attach_right_arm == true) or 
+        (global.weapon_attach_left_arm == true))) {
+        
+        instance_create(x,y,obj_Slash);
+        slash_timer = false;
+        alarm[0] = cool_down;
+    }
+}
+
+// Boomerang
+if ( weapon_type == 7 )
+{
+    
 }
 
 if (weapon_picked_up == true) {
